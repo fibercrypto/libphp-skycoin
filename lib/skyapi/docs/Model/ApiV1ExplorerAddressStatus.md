@@ -1,6 +1,7 @@
-# Apiv1exploreraddressStatus
+# # ApiV1ExplorerAddressStatus
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **unconfirmed** | **bool** |  | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **label** | **int** |  | [optional] 
 **confirmed** | **bool** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

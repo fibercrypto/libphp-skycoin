@@ -1,8 +1,5 @@
 FROM composer:latest
 
 WORKDIR /usr/src/skyapi
-COPY ./lib/skyapi/composer.json ./
+COPY ./lib/skyapi ./
 
-RUN composer install && ./vendor/bin/phpunit
-
-VOLUME /usr/src/

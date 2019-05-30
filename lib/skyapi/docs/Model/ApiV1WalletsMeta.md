@@ -1,6 +1,7 @@
-# Apiv1walletsMeta
+# # ApiV1WalletsMeta
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filename** | **string** |  | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **coin** | **string** |  | [optional] 
 **timestamp** | **int** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

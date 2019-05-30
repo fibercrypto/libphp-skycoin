@@ -1,6 +1,7 @@
-# Apiv1exploreraddressInputs
+# # ApiV1ExplorerAddressInputs
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owner** | **string** |  | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **coins** | **string** |  | [optional] 
 **uxid** | **string** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 
