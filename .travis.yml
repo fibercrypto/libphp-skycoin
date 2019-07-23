@@ -8,7 +8,7 @@ env:
 matrix:
   include:
    - os: linux
-     dist: xenial
+     dist: bionic
   #  - os: osx
  
 before_install:
@@ -17,6 +17,7 @@ before_install:
   - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-os.sh; fi
   - cd $TRAVIS_BUILD_DIR
   - php -v
+  - php-config --includes --ldflags
   - eval "$(gimme 1.11)"
 
 script: make test

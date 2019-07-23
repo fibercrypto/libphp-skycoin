@@ -16,4 +16,4 @@ set -ex
   sudo rm -rf swig_build
 
   # Install PHP
-  sudo apt-get install  php7.0-dev composer -y
+  sudo apt-get install  php-dev composer -y
