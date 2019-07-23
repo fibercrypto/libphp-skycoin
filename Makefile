@@ -27,6 +27,8 @@ HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 PHP_CLIENT_DIR = lib/skyapi
 PHP_SWIG_DIR = lib/skycoin
 
+PHP_INCLUDE = -I/usr/include/php/20151012 -I/usr/include/php/20151012/main -I/usr/include/php/20151012/TSRM -I/usr/include/php/20151012/Zend -I/usr/include/php/20151012/ext -I/usr/include/php/20151012/ext/date/lib
+
 configure: ## Configure build environment
 	set -ex
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
@@ -57,7 +59,7 @@ build-swig: build-libc ## Generate PHP C module from SWIG interfaces
 	swig -php7 -Iswig/include -I$(INCLUDE_DIR) -outdir $(PHP_SWIG_DIR) -o $(PHP_SWIG_DIR)/skycoin_wrap.c $(PHP_SWIG_DIR)/libskycoin.i
 
 build-libsky-shared: build-swig ## Build shared library including SWIG wrappers
-	gcc -fpic -I$(PHP_SWIG_DIR) -I$(INCLUDE_DIR) -c $(PHP_SWIG_DIR)/skycoin_wrap.c
+	gcc -fpic $(PHP_INCLUDE) -I$(PHP_SWIG_DIR) -I$(INCLUDE_DIR) -c $(PHP_SWIG_DIR)/skycoin_wrap.c
 	gcc -shared skycoin_wrap.o $(BUILDLIBC_DIR)/libskycoin.a -o $(PHP_SWIG_DIR)/libskycoin.so
 
 build: build-libsky-shared ## Install with composer needed libraries
