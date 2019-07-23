@@ -58,17 +58,17 @@ build-swig: ## Generate PHP C module from SWIG interfaces
 		fi \
 	}
 	mkdir -p $(PHP_SWIG_DIR)
-	swig -php -Iswig/include -I$(INCLUDE_DIR) -outdir $(PHP_SWIG_DIR) -o $(PHP_SWIG_DIR)/skycoin_wrap.c $(PHP_SWIG_DIR)/libskycoin.i
+	swig -php7 -Iswig/include -I$(INCLUDE_DIR) -outdir $(PHP_SWIG_DIR) -o $(PHP_SWIG_DIR)/skycoin_wrap.c $(PHP_SWIG_DIR)/libskycoin.i
 
 build-libsky-shared: build-swig ## Build shared library including SWIG wrappers
-	gcc  `php-config --includes` -fpic -I/usr/include/php -I$(PHP_SWIG_DIR) -I$(INCLUDE_DIR) -c $(PHP_SWIG_DIR)/skycoin_wrap.c
+	gcc  `php-config --includes` -fpic -I$(PHP_SWIG_DIR) -I$(INCLUDE_DIR) -c $(PHP_SWIG_DIR)/skycoin_wrap.c
 	gcc -shared skycoin_wrap.o $(BUILDLIBC_DIR)/libskycoin.a -o $(PHP_SWIG_DIR)/libskycoin.so
 
 build: build-libsky-shared ## Install with composer needed libraries
-	# (cd $(PHP_CLIENT_DIR) && composer install)
+	(cd $(PHP_CLIENT_DIR) && composer install)
 
 test: build ## Run test cases
-	# (cd $(PHP_CLIENT_DIR) && vendor/bin/phpunit)
+	(cd $(PHP_CLIENT_DIR) && vendor/bin/phpunit)
 
 help: ## List help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

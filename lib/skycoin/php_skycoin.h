@@ -20,16 +20,6 @@ extern zend_module_entry skycoin_module_entry;
 # define PHP_SKYCOIN_API
 #endif
 
-#ifdef ZTS
-#include "TSRM.h"
-#endif
-
-PHP_MINIT_FUNCTION(skycoin);
-PHP_MSHUTDOWN_FUNCTION(skycoin);
-PHP_RINIT_FUNCTION(skycoin);
-PHP_RSHUTDOWN_FUNCTION(skycoin);
-PHP_MINFO_FUNCTION(skycoin);
-
 ZEND_NAMED_FUNCTION(_wrap_cipher_PubKey_data_set);
 ZEND_NAMED_FUNCTION(_wrap_cipher_PubKey_data_get);
 ZEND_NAMED_FUNCTION(_wrap_new_cipher_PubKey);
@@ -672,4 +662,6 @@ ZEND_NAMED_FUNCTION(_wrap_FeeCalculator_callback_get);
 ZEND_NAMED_FUNCTION(_wrap_FeeCalculator_context_set);
 ZEND_NAMED_FUNCTION(_wrap_FeeCalculator_context_get);
 ZEND_NAMED_FUNCTION(_wrap_new_FeeCalculator);
+PHP_MINIT_FUNCTION(skycoin);
+
 #endif /* PHP_SKYCOIN_H */
