@@ -3,4 +3,5 @@ skycoin_wrap.o
 lib/skycoin/*.h
 lib/skycoin/skycoin.php
 lib/skycoin/*.o
+lib/skycoin/*.c
 
