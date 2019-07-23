@@ -27,7 +27,7 @@ HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 PHP_CLIENT_DIR = lib/skyapi
 PHP_SWIG_DIR = lib/skycoin
 
-PHP_INCLUDE = -I/usr/include/php/20151012 -I/usr/include/php/20151012/main -I/usr/include/php/20151012/TSRM -I/usr/include/php/20151012/Zend -I/usr/include/php/20151012/ext -I/usr/include/php/20151012/ext/date/lib
+PHP_INCLUDE ?= `php-config --includes --ldflags`
 
 configure: ## Configure build environment
 	set -ex
@@ -63,10 +63,10 @@ build-libsky-shared: build-swig ## Build shared library including SWIG wrappers
 	gcc -shared skycoin_wrap.o $(BUILDLIBC_DIR)/libskycoin.a -o $(PHP_SWIG_DIR)/libskycoin.so
 
 build: build-libsky-shared ## Install with composer needed libraries
-	# (cd $(PHP_CLIENT_DIR) && composer install)
+	(cd $(PHP_CLIENT_DIR) && composer install)
 
 test: build ## Run test cases
-	# (cd $(PHP_CLIENT_DIR) && vendor/bin/phpunit)
+	(cd $(PHP_CLIENT_DIR) && vendor/bin/phpunit)
 
 help: ## List help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

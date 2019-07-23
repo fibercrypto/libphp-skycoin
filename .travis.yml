@@ -9,12 +9,10 @@ matrix:
   include:
    - os: linux
      dist: xenial
-  #  - os: osx
  
 before_install:
   - go get github.com/gz-c/gox
   - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
-  - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-os.sh; fi
   - cd $TRAVIS_BUILD_DIR
   - php -v
   - gcc -v
