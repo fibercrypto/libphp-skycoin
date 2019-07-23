@@ -1,5 +1,4 @@
 language: php
-sudo: false
 
 env:
   global:
@@ -18,6 +17,7 @@ before_install:
   - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-os.sh; fi
   - cd $TRAVIS_BUILD_DIR
   - php -v
+  - gcc -v
   - eval "$(gimme 1.11)"
 
 script: make test
