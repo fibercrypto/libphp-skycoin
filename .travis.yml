@@ -1,7 +1,9 @@
 language: php
 sudo: false
-# php:
-#   - 7.1.9
+
+env:
+  global:
+    - CGO_ENABLED: 1
 
 matrix:
   include:
