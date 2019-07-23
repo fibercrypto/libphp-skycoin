@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**\OpenAPI\Client\Model\TransactionStatus**](TransactionStatus.md) |  | [optional] 
+**status** | [**\Skyapi\Model\TransactionStatus**](TransactionStatus.md) |  | [optional] 
 **fee** | **int** |  | [optional] 
 **inner_hash** | **string** |  | [optional] 
-**inputs** | [**\OpenAPI\Client\Model\TransactionVerboseTxnInputs[]**](TransactionVerboseTxnInputs.md) |  | [optional] 
+**inputs** | [**\Skyapi\Model\TransactionVerboseTxnInputs[]**](TransactionVerboseTxnInputs.md) |  | [optional] 
 **length** | **int** |  | [optional] 
 **outputs** | **object[]** |  | [optional] 
 **sigs** | **string[]** |  | [optional] 

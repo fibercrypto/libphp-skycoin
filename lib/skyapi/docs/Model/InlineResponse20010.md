@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**transaction** | [**\OpenAPI\Client\Model\ApiV1PendingTxsTransaction**](ApiV1PendingTxsTransaction.md) |  | [optional] 
+**transaction** | [**\Skyapi\Model\ApiV1PendingTxsTransaction**](ApiV1PendingTxsTransaction.md) |  | [optional] 
 **received** | **string** |  | [optional] 
 **checked** | **string** |  | [optional] 
 **announced** | **string** |  | [optional] 

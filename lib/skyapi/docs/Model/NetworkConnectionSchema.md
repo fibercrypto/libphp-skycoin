@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **mirror** | **int** |  | [optional] 
 **outgoing** | **bool** |  | [optional] 
 **state** | **string** |  | [optional] 
-**unconfirmed_verify_transaction** | [**\OpenAPI\Client\Model\NetworkConnectionSchemaUnconfirmedVerifyTransaction**](NetworkConnectionSchemaUnconfirmedVerifyTransaction.md) |  | [optional] 
+**unconfirmed_verify_transaction** | [**\Skyapi\Model\NetworkConnectionSchemaUnconfirmedVerifyTransaction**](NetworkConnectionSchemaUnconfirmedVerifyTransaction.md) |  | [optional] 
 **user_agent** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
