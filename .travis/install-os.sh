@@ -18,3 +18,7 @@
   brew install swig || brew link --overwrite swig;
   echo 'Installing gimme'
   brew install gimme;
+
+  # Install PHP
+
+  curl -s https://php-osx.liip.ch/install.sh | bash -s 7.2
