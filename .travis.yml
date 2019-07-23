@@ -4,3 +4,7 @@ php:
     - 7.1
 before_install: make build
 script: make test
+
+notifications:
+  email: false
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
