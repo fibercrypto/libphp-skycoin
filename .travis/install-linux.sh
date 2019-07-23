@@ -1,7 +1,7 @@
 
 set -ex
   sudo apt-get update
-  sudo apt-get install -qq g++-6 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90;
+  sudo apt-get install  g++ -y
   curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
   chmod +x ~/bin/gimme
   mkdir swig_build && \
