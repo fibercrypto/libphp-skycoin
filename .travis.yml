@@ -1,6 +1,25 @@
-language: php
 sudo: false
-php:
-    - 7.1
-before_install: make build
+language: c
+
+env:
+  global:
+    - CGO_ENABLED: 1
+
+matrix:
+  include:
+   - os: linux
+     dist: xenial
+ 
+before_install:
+  - go get github.com/gz-c/gox
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+  - cd $TRAVIS_BUILD_DIR
+  - php -v
+  - gcc -v
+  - eval "$(gimme 1.11)"
+
 script: make test
+
+notifications:
+  email: false
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
