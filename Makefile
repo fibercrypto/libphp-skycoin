@@ -57,8 +57,8 @@ build-swig: build-libc ## Generate PHP C module from SWIG interfaces
 	swig -php7 -Iswig/include -I$(INCLUDE_DIR) -outdir $(PHP_SWIG_DIR) -o $(PHP_SWIG_DIR)/skycoin_wrap.c $(PHP_SWIG_DIR)/libskycoin.i
 
 build-libsky-shared: build-swig ## Build shared library including SWIG wrappers
-	gcc  `php-config --includes` -fpic -I$(PHP_SWIG_DIR) -I$(INCLUDE_DIR) -c $(PHP_SWIG_DIR)/skycoin_wrap.c
-	gcc -shared skycoin_wrap.o $(BUILDLIBC_DIR)/libskycoin.a -o $(PHP_SWIG_DIR)/libskycoin.so
+	# gcc  `php-config --includes` -fpic -I$(PHP_SWIG_DIR) -I$(INCLUDE_DIR) -c $(PHP_SWIG_DIR)/skycoin_wrap.c
+	# gcc -shared skycoin_wrap.o $(BUILDLIBC_DIR)/libskycoin.a -o $(PHP_SWIG_DIR)/libskycoin.so
 
 build: build-libsky-shared ## Install with composer needed libraries
 	# (cd $(PHP_CLIENT_DIR) && composer install)
