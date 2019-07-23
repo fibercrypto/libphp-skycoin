@@ -1,3 +1,6 @@
+  #!/bin/sh
+
+  set -ex
   echo 'Updating packages database'
   brew update
   echo 'Available versions (gcc)'

@@ -6,6 +6,7 @@ php:
 matrix:
   include:
    - os: linux
+     dist: bionic   
    - os: osx
  
 before_install:
