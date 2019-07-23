@@ -2,7 +2,18 @@ language: php
 sudo: false
 php:
     - 7.1
-before_install: make build
+
+matrix:
+  include:
+   - os: linux
+   - os: osx
+ 
+before_install:
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+  - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-os.sh; fi
+  - cd $TRAVIS_BUILD_DIR
+  - eval "$(gimme 1.11)"
+
 script: make test
 
 notifications:

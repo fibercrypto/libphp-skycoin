@@ -24,11 +24,7 @@ LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SWIG_FILES = $(shell find $(PHP_SWIG_DIR) -type f -name "*.i")
 HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 
-# Added by Swagger
-LIB_SKYCOIN_DIR = gopath/src/github.com/skycoin/libskycoin
-SWAGGER_SPEC_DIR = $(LIB_SKYCOIN_DIR)/lib/swagger/skycoin.v0.25.1.openapi.v2.yml
 PHP_CLIENT_DIR = lib/skyapi
-
 PHP_SWIG_DIR = lib/skycoin
 
 configure: ## Configure build environment
