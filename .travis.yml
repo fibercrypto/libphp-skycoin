@@ -1,4 +1,4 @@
-language: go
+language: php
 sudo: false
 
 env:
@@ -9,7 +9,7 @@ matrix:
   include:
    - os: linux
      dist: xenial
-   - os: osx
+  #  - os: osx
  
 before_install:
   - go get github.com/gz-c/gox
