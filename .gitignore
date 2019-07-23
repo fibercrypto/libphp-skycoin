@@ -1,2 +1,6 @@
-lib/skycoin/libskycoin.so
+lib/skycoin/*.so
 skycoin_wrap.o
+lib/skycoin/*.h
+lib/skycoin/skycoin.php
+lib/skycoin/*.o
+

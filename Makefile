@@ -42,7 +42,7 @@ build-libc: configure ## Build libskycoin C client library
 	cp $(SKYLIBC_DIR)/include/swig.h swig/include/
 	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > swig/include/libskycoin.h
 
-build-swig: ## Generate PHP C module from SWIG interfaces
+build-swig: build-libc ## Generate PHP C module from SWIG interfaces
 	#Generate structs.i from skytypes.gen.h
 	rm -f $(PHP_SWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(PHP_SWIG_DIR)/structs.i
