@@ -5,3 +5,4 @@ lib/skycoin/skycoin.php
 lib/skycoin/*.o
 lib/skycoin/*.c
 
+*.idea
