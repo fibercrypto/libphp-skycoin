@@ -27,7 +27,7 @@ HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 PHP_CLIENT_DIR = lib/skyapi
 PHP_SWIG_DIR = lib/skycoin
 
-PHP_INCLUDE ?= `php-config --includes --ldflags`
+PHP_INCLUDE = -I/usr/include/php/20151012 -I/usr/include/php/20151012/main -I/usr/include/php/20151012/TSRM -I/usr/include/php/20151012/Zend -I/usr/include/php/20151012/ext -I/usr/include/php/20151012/ext/date/lib
 
 configure: ## Configure build environment
 	set -ex
