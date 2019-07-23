@@ -8,6 +8,7 @@ env:
 matrix:
   include:
    - os: linux
+     dist: xenial
    - os: osx
  
 before_install:
