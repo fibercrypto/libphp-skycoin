@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**announced** | **string** |  | [optional] 
-**is_valid** | **bool** |  | [optional] 
-**checked** | **string** |  | [optional] 
-**received** | **string** |  | [optional] 
-**transaction** | [**\Skyapi\Model\ApiV1PendingTxsTransaction**](ApiV1PendingTxsTransaction.md) |  | [optional] 
+**connections** | [**\Skyapi\Model\NetworkConnectionSchema[]**](NetworkConnectionSchema.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
