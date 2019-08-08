@@ -1,4 +1,4 @@
-# Skyapi\DefaultApi
+# SkyApi\DefaultApi
 
 All URIs are relative to *http://127.0.0.1:6420*
 
@@ -65,7 +65,7 @@ Method | HTTP request | Description
 
 ## addressCount
 
-> \Skyapi\Model\InlineResponse200 addressCount()
+> \SkyApi\Model\InlineResponse200 addressCount()
 
 Returns the total number of unique address that have coins.
 
@@ -76,7 +76,7 @@ Returns the total number of unique address that have coins.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -97,7 +97,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\SkyApi\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Returns the historical, spent outputs associated with an address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -182,7 +182,7 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -232,7 +232,7 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -282,7 +282,7 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -337,12 +337,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## block
 
-> \Skyapi\Model\BlockSchema[] block($hash, $seq)
+> \SkyApi\Model\BlockSchema[] block($hash, $seq)
 
 Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
@@ -397,7 +397,7 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\BlockSchema[]**](../Model/BlockSchema.md)
+[**\SkyApi\Model\BlockSchema[]**](../Model/BlockSchema.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ Returns the blockchain metadata.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -503,7 +503,7 @@ Returns the blockchain sync progress.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -542,7 +542,7 @@ No authorization required
 
 ## blocks
 
-> \Skyapi\Model\InlineResponse2001 blocks($start, $end, $seq)
+> \SkyApi\Model\InlineResponse2001 blocks($start, $end, $seq)
 
 Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
@@ -553,7 +553,7 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -582,7 +582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\SkyApi\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -600,7 +600,7 @@ No authorization required
 
 ## coinSupply
 
-> \Skyapi\Model\InlineResponse2002 coinSupply()
+> \SkyApi\Model\InlineResponse2002 coinSupply()
 
 
 
@@ -613,7 +613,7 @@ coinSupplyHandler returns coin distribution supply stats
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -634,7 +634,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\SkyApi\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -652,7 +652,7 @@ No authorization required
 
 ## csrf
 
-> \Skyapi\Model\InlineResponse2003 csrf()
+> \SkyApi\Model\InlineResponse2003 csrf()
 
 Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
 
@@ -663,7 +663,7 @@ Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -684,7 +684,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\SkyApi\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -713,7 +713,7 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -768,7 +768,7 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -824,7 +824,7 @@ No authorization required
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -881,7 +881,7 @@ defaultConnectionsHandler returns the list of default hardcoded bootstrap addres
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -931,7 +931,7 @@ Returns node health data.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -983,7 +983,7 @@ Returns the most recent N blocks on the blockchain
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1026,7 +1026,7 @@ No authorization required
 
 ## networkConnection
 
-> \Skyapi\Model\NetworkConnectionSchema networkConnection($addr)
+> \SkyApi\Model\NetworkConnectionSchema networkConnection($addr)
 
 This endpoint returns a specific connection.
 
@@ -1037,7 +1037,7 @@ This endpoint returns a specific connection.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1062,7 +1062,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\NetworkConnectionSchema**](../Model/NetworkConnectionSchema.md)
+[**\SkyApi\Model\NetworkConnectionSchema**](../Model/NetworkConnectionSchema.md)
 
 ### Authorization
 
@@ -1080,7 +1080,7 @@ No authorization required
 
 ## networkConnections
 
-> \Skyapi\Model\InlineResponse2004 networkConnections($states, $direction)
+> \SkyApi\Model\InlineResponse2004 networkConnections($states, $direction)
 
 This endpoint returns all outgoings connections.
 
@@ -1092,12 +1092,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1125,7 +1125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\SkyApi\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -1157,12 +1157,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1218,7 +1218,7 @@ This endpoint returns all connections found through peer exchange
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1268,7 +1268,7 @@ trustConnectionsHandler returns all trusted connections.\\n They are not necessa
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1318,7 +1318,7 @@ If neither addrs nor hashes are specificed, return all unspent outputs. If only 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1375,12 +1375,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1426,7 +1426,7 @@ Name | Type | Description  | Notes
 
 ## pendingTxs
 
-> \Skyapi\Model\InlineResponse20010[] pendingTxs()
+> \SkyApi\Model\InlineResponse20010[] pendingTxs()
 
 
 
@@ -1437,7 +1437,7 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1458,7 +1458,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse20010[]**](../Model/InlineResponse20010.md)
+[**\SkyApi\Model\InlineResponse20010[]**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -1490,12 +1490,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1535,7 +1535,7 @@ This endpoint does not need any parameter.
 
 ## richlist
 
-> object richlist($include_distribution, $n)
+> object richlist($includeDistribution, $n)
 
 Returns the top skycoin holders.
 
@@ -1546,16 +1546,16 @@ Returns the top skycoin holders.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$include_distribution = True; // bool | include distribution addresses or not, default value false
+$includeDistribution = True; // bool | include distribution addresses or not, default value false
 $n = 'n_example'; // string | include distribution addresses or not, default value false
 
 try {
-    $result = $apiInstance->richlist($include_distribution, $n);
+    $result = $apiInstance->richlist($includeDistribution, $n);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->richlist: ', $e->getMessage(), PHP_EOL;
@@ -1568,7 +1568,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_distribution** | **bool**| include distribution addresses or not, default value false | [optional]
+ **includeDistribution** | **bool**| include distribution addresses or not, default value false | [optional]
  **n** | **string**| include distribution addresses or not, default value false | [optional]
 
 ### Return type
@@ -1591,7 +1591,7 @@ No authorization required
 
 ## transaction
 
-> \Skyapi\Model\Transaction transaction($txid)
+> \SkyApi\Model\Transaction transaction($txid)
 
 
 
@@ -1604,7 +1604,7 @@ Returns a transaction identified by its txid hash with just id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1629,7 +1629,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\Transaction**](../Model/Transaction.md)
+[**\SkyApi\Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -1647,7 +1647,7 @@ No authorization required
 
 ## transactionInject
 
-> string transactionInject($rawtx)
+> string transactionInject($rawtx, $noBroadcast)
 
 Broadcast a hex-encoded, serialized transaction to the network.
 
@@ -1659,21 +1659,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $rawtx = 'rawtx_example'; // string | hex-encoded serialized transaction string.
+$noBroadcast = True; // bool | Disable the network broadcast
 
 try {
-    $result = $apiInstance->transactionInject($rawtx);
+    $result = $apiInstance->transactionInject($rawtx, $noBroadcast);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->transactionInject: ', $e->getMessage(), PHP_EOL;
@@ -1687,6 +1688,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rawtx** | **string**| hex-encoded serialized transaction string. |
+ **noBroadcast** | **bool**| Disable the network broadcast | [optional]
 
 ### Return type
 
@@ -1708,7 +1710,7 @@ Name | Type | Description  | Notes
 
 ## transactionPost
 
-> \Skyapi\Model\InlineResponse2008 transactionPost($transaction_v2_params_address)
+> \SkyApi\Model\InlineResponse2008 transactionPost($transactionV2ParamsAddress)
 
 
 
@@ -1720,21 +1722,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$transaction_v2_params_address = new \Skyapi\Model\TransactionV2ParamsAddress(); // \Skyapi\Model\TransactionV2ParamsAddress | 
+$transactionV2ParamsAddress = new \SkyApi\Model\TransactionV2ParamsAddress(); // \SkyApi\Model\TransactionV2ParamsAddress | 
 
 try {
-    $result = $apiInstance->transactionPost($transaction_v2_params_address);
+    $result = $apiInstance->transactionPost($transactionV2ParamsAddress);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->transactionPost: ', $e->getMessage(), PHP_EOL;
@@ -1747,11 +1749,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_v2_params_address** | [**\Skyapi\Model\TransactionV2ParamsAddress**](../Model/TransactionV2ParamsAddress.md)|  | [optional]
+ **transactionV2ParamsAddress** | [**\SkyApi\Model\TransactionV2ParamsAddress**](../Model/TransactionV2ParamsAddress.md)|  | [optional]
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\SkyApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 
@@ -1769,7 +1771,7 @@ Name | Type | Description  | Notes
 
 ## transactionPostUnspent
 
-> \Skyapi\Model\InlineResponse2008 transactionPostUnspent($transaction_v2_params_unspent)
+> \SkyApi\Model\InlineResponse2008 transactionPostUnspent($transactionV2ParamsUnspent)
 
 
 
@@ -1781,21 +1783,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$transaction_v2_params_unspent = new \Skyapi\Model\TransactionV2ParamsUnspent(); // \Skyapi\Model\TransactionV2ParamsUnspent | Unspent parameters
+$transactionV2ParamsUnspent = new \SkyApi\Model\TransactionV2ParamsUnspent(); // \SkyApi\Model\TransactionV2ParamsUnspent | Unspent parameters
 
 try {
-    $result = $apiInstance->transactionPostUnspent($transaction_v2_params_unspent);
+    $result = $apiInstance->transactionPostUnspent($transactionV2ParamsUnspent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->transactionPostUnspent: ', $e->getMessage(), PHP_EOL;
@@ -1808,11 +1810,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_v2_params_unspent** | [**\Skyapi\Model\TransactionV2ParamsUnspent**](../Model/TransactionV2ParamsUnspent.md)| Unspent parameters |
+ **transactionV2ParamsUnspent** | [**\SkyApi\Model\TransactionV2ParamsUnspent**](../Model/TransactionV2ParamsUnspent.md)| Unspent parameters |
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\SkyApi\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 
@@ -1841,7 +1843,7 @@ Returns the hex-encoded byte serialization of a transaction. The transaction may
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1884,7 +1886,7 @@ No authorization required
 
 ## transactionVerify
 
-> object transactionVerify($transaction_verify_request)
+> object transactionVerify($transactionVerifyRequest)
 
 
 
@@ -1898,21 +1900,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$transaction_verify_request = new \Skyapi\Model\TransactionVerifyRequest(); // \Skyapi\Model\TransactionVerifyRequest | 
+$transactionVerifyRequest = new \SkyApi\Model\TransactionVerifyRequest(); // \SkyApi\Model\TransactionVerifyRequest | 
 
 try {
-    $result = $apiInstance->transactionVerify($transaction_verify_request);
+    $result = $apiInstance->transactionVerify($transactionVerifyRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->transactionVerify: ', $e->getMessage(), PHP_EOL;
@@ -1925,7 +1927,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_verify_request** | [**\Skyapi\Model\TransactionVerifyRequest**](../Model/TransactionVerifyRequest.md)|  |
+ **transactionVerifyRequest** | [**\SkyApi\Model\TransactionVerifyRequest**](../Model/TransactionVerifyRequest.md)|  |
 
 ### Return type
 
@@ -1958,7 +1960,7 @@ Returns transactions that match the filters.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2015,12 +2017,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2077,7 +2079,7 @@ Returns an unspent output by ID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2132,18 +2134,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$address = new \stdClass; // object | Address id.
+$address = new \SkyApi\Model\Address(); // Address | Address id.
 
 try {
     $result = $apiInstance->verifyAddress($address);
@@ -2159,7 +2161,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | [**object**](../Model/.md)| Address id. |
+ **address** | [**Address**](../Model/.md)| Address id. |
 
 ### Return type
 
@@ -2181,7 +2183,7 @@ Name | Type | Description  | Notes
 
 ## version
 
-> \Skyapi\Model\InlineResponse2005 version()
+> \SkyApi\Model\InlineResponse2005 version()
 
 
 
@@ -2194,7 +2196,7 @@ versionHandler returns the application version info
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2215,7 +2217,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\SkyApi\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -2244,7 +2246,7 @@ Returns a wallet by id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2298,7 +2300,7 @@ Returns the wallet's balance, both confirmed and predicted.  The predicted balan
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2341,11 +2343,11 @@ No authorization required
 
 ## walletCreate
 
-> object walletCreate($seed, $label, $scan, $encrypt, $password)
+> object walletCreate($type, $seed, $label, $seedPassphrase, $bip44Coin, $xpub, $scan, $encrypt, $password)
 
 
 
-Loads wallet from seed, will scan ahead N address and load addresses till the last one that have coins.
+Create a wallet
 
 ### Example
 
@@ -2355,25 +2357,29 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$type = 'type_example'; // string | wallet seed passphrase [optional, bip44 type wallet only]
 $seed = 'seed_example'; // string | Wallet seed.
 $label = 'label_example'; // string | Wallet label.
+$seedPassphrase = 'seedPassphrase_example'; // string | wallet seed passphrase [optional, bip44 type wallet only]
+$bip44Coin = 'bip44Coin_example'; // string | BIP44 coin type [optional, defaults to 8000 (skycoin's coin type), only valid if type is \"bip44\"]
+$xpub = 'xpub_example'; // string | xpub key [required for xpub wallets]
 $scan = 56; // int | The number of addresses to scan ahead for balances.
 $encrypt = True; // bool | Encrypt wallet.
 $password = 'password_example'; // string | Wallet Password
 
 try {
-    $result = $apiInstance->walletCreate($seed, $label, $scan, $encrypt, $password);
+    $result = $apiInstance->walletCreate($type, $seed, $label, $seedPassphrase, $bip44Coin, $xpub, $scan, $encrypt, $password);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->walletCreate: ', $e->getMessage(), PHP_EOL;
@@ -2386,8 +2392,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **type** | **string**| wallet seed passphrase [optional, bip44 type wallet only] |
  **seed** | **string**| Wallet seed. |
  **label** | **string**| Wallet label. |
+ **seedPassphrase** | **string**| wallet seed passphrase [optional, bip44 type wallet only] | [optional]
+ **bip44Coin** | **string**| BIP44 coin type [optional, defaults to 8000 (skycoin&#39;s coin type), only valid if type is \&quot;bip44\&quot;] | [optional]
+ **xpub** | **string**| xpub key [required for xpub wallets] | [optional]
  **scan** | **int**| The number of addresses to scan ahead for balances. | [optional]
  **encrypt** | **bool**| Encrypt wallet. | [optional]
  **password** | **string**| Wallet Password | [optional]
@@ -2424,12 +2434,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2487,12 +2497,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2538,7 +2548,7 @@ Name | Type | Description  | Notes
 
 ## walletFolder
 
-> \Skyapi\Model\InlineResponse2007 walletFolder($addr)
+> \SkyApi\Model\InlineResponse2007 walletFolder($addr)
 
 
 
@@ -2551,7 +2561,7 @@ Returns the wallet directory path
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2576,7 +2586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\SkyApi\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
@@ -2608,12 +2618,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2674,7 +2684,7 @@ Returns the wallet directory path
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -2717,9 +2727,11 @@ No authorization required
 
 ## walletRecover
 
-> object walletRecover($id, $seed, $password)
+> object walletRecover($id, $seed, $seedPassphrase, $password)
 
 Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
+
+Recovers an encrypted wallet by providing the wallet seed and optional seed passphrase
 
 ### Example
 
@@ -2729,12 +2741,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2742,10 +2754,11 @@ $apiInstance = new Skyapi\Api\DefaultApi(
 );
 $id = 'id_example'; // string | Wallet id.
 $seed = 'seed_example'; // string | Wallet seed.
+$seedPassphrase = 'seedPassphrase_example'; // string | Wallet seed-passphrase.
 $password = 'password_example'; // string | Wallet password.
 
 try {
-    $result = $apiInstance->walletRecover($id, $seed, $password);
+    $result = $apiInstance->walletRecover($id, $seed, $seedPassphrase, $password);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->walletRecover: ', $e->getMessage(), PHP_EOL;
@@ -2760,6 +2773,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Wallet id. |
  **seed** | **string**| Wallet seed. |
+ **seedPassphrase** | **string**| Wallet seed-passphrase. | [optional]
  **password** | **string**| Wallet password. | [optional]
 
 ### Return type
@@ -2794,12 +2808,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2857,12 +2871,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2906,7 +2920,7 @@ Name | Type | Description  | Notes
 
 ## walletTransaction
 
-> object walletTransaction($wallet_transaction_request)
+> object walletTransaction($walletTransactionRequest)
 
 Creates a signed transaction
 
@@ -2918,21 +2932,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$wallet_transaction_request = new \Skyapi\Model\WalletTransactionRequest(); // \Skyapi\Model\WalletTransactionRequest | 
+$walletTransactionRequest = new \SkyApi\Model\WalletTransactionRequest(); // \SkyApi\Model\WalletTransactionRequest | 
 
 try {
-    $result = $apiInstance->walletTransaction($wallet_transaction_request);
+    $result = $apiInstance->walletTransaction($walletTransactionRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->walletTransaction: ', $e->getMessage(), PHP_EOL;
@@ -2945,7 +2959,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wallet_transaction_request** | [**\Skyapi\Model\WalletTransactionRequest**](../Model/WalletTransactionRequest.md)|  |
+ **walletTransactionRequest** | [**\SkyApi\Model\WalletTransactionRequest**](../Model/WalletTransactionRequest.md)|  |
 
 ### Return type
 
@@ -2967,7 +2981,7 @@ Name | Type | Description  | Notes
 
 ## walletTransactionSign
 
-> \Skyapi\Model\InlineResponse2009 walletTransactionSign($wallet_transaction_sign_request)
+> \SkyApi\Model\InlineResponse2009 walletTransactionSign($walletTransactionSignRequest)
 
 Creates a signed transaction
 
@@ -2979,21 +2993,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$wallet_transaction_sign_request = new \Skyapi\Model\WalletTransactionSignRequest(); // \Skyapi\Model\WalletTransactionSignRequest | 
+$walletTransactionSignRequest = new \SkyApi\Model\WalletTransactionSignRequest(); // \SkyApi\Model\WalletTransactionSignRequest | 
 
 try {
-    $result = $apiInstance->walletTransactionSign($wallet_transaction_sign_request);
+    $result = $apiInstance->walletTransactionSign($walletTransactionSignRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->walletTransactionSign: ', $e->getMessage(), PHP_EOL;
@@ -3006,11 +3020,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wallet_transaction_sign_request** | [**\Skyapi\Model\WalletTransactionSignRequest**](../Model/WalletTransactionSignRequest.md)|  |
+ **walletTransactionSignRequest** | [**\SkyApi\Model\WalletTransactionSignRequest**](../Model/WalletTransactionSignRequest.md)|  |
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\SkyApi\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -3028,7 +3042,7 @@ Name | Type | Description  | Notes
 
 ## walletTransactions
 
-> \Skyapi\Model\InlineResponse2006 walletTransactions($id)
+> \SkyApi\Model\InlineResponse2006 walletTransactions($id)
 
 
 
@@ -3039,7 +3053,7 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -3064,7 +3078,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Skyapi\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\SkyApi\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -3094,12 +3108,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3154,12 +3168,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: csrfAuth
-$config = Skyapi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
+$config = SkyApi\Configuration::getDefaultConfiguration()->setApiKey('X-CSRF-TOKEN', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Skyapi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
+// $config = SkyApi\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-CSRF-TOKEN', 'Bearer');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -3218,7 +3232,7 @@ Returns all loaded wallets
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Skyapi\Api\DefaultApi(
+$apiInstance = new SkyApi\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

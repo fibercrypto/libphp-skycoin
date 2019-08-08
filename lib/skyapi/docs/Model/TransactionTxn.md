@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**inner_hash** | **string** |  | [optional] 
+**innerHash** | **string** |  | [optional] 
 **inputs** | **string[]** |  | [optional] 
 **length** | **int** |  | [optional] 
 **outputs** | **object[]** |  | [optional] 

@@ -1465,7 +1465,7 @@ static swig_type_info _swigt__p_float = {"_p_float", "float *|GoFloat32_ *|GoFlo
 static swig_type_info _swigt__p_httphelper__Address = {"_p_httphelper__Address", "httphelper__Address *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_httphelper__SHA256 = {"_p_httphelper__SHA256", "httphelper__SHA256 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|GoInt32 *|GoInt_ *|GoInt32_ *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_long_long = {"_p_long_long", "GoStringMap_ *|GoInt64 *|long long *|GoInt64_ *|GoInt *|OutputsResult_Handle *|WalletReadableNotes_Handle *|TransactionResult_Handle *|Client__Handle *|Wallet__Handle *|Options__Handle *|WalletResponse__Handle *|PasswordReader__Handle *|CLI__Handle *|Config__Handle *|SortableTransactionResult_Handle *|Transactions__Handle *|Transaction__Handle *|Wallets__Handle *|Strings__Handle *|CreateTransactionResponse__Handle *|CreatedTransaction__Handle *|CreatedTransactionOutput__Handle *|CreatedTransactionInput__Handle *|Block__Handle *|SpendResult_Handle *|BalanceResult_Handle *|SignedBlock__Handle *|CreateTransactionParams__Handle *|ReadableOutputSet_Handle *|CreateTransactionRequest__Handle *|WebRpcClient__Handle *|ReadableWallet__Handle *|ReadableEntry__Handle *|AddressUxOuts_Handle *|BlockHeader__Handle *|BlockBody__Handle *|StatusResult_Handle *|BuildInfo_Handle *|ReadableUnspentOutputsSummary_Handle *|Hash_Handle *|Number_Handle *|Signature_Handle *|UnspentOutputsSummary_Handle *|Handle *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_long_long = {"_p_long_long", "GoStringMap_ *|GoInt64 *|long long *|GoInt64_ *|GoInt *|OutputsResult_Handle *|WalletReadableNotes_Handle *|TransactionResult_Handle *|WalletResponse__Handle *|Client__Handle *|SortableTransactionResult_Handle *|Transactions__Handle *|ReadableWallet__Handle *|ReadableEntry__Handle *|CreatedTransactionInput__Handle *|CreatedTransactionOutput__Handle *|Transaction__Handle *|CreatedTransaction__Handle *|CreateTransactionResponse__Handle *|Wallets__Handle *|Strings__Handle *|Wallet__Handle *|Options__Handle *|Config__Handle *|CLI__Handle *|SpendResult_Handle *|BalanceResult_Handle *|SignedBlock__Handle *|CreateTransactionParams__Handle *|ReadableOutputSet_Handle *|CreateTransactionRequest__Handle *|WebRpcClient__Handle *|BlockHeader__Handle *|BlockBody__Handle *|Block__Handle *|AddressUxOuts_Handle *|PasswordReader__Handle *|StatusResult_Handle *|BuildInfo_Handle *|ReadableUnspentOutputsSummary_Handle *|Hash_Handle *|Number_Handle *|Signature_Handle *|UnspentOutputsSummary_Handle *|Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_GoSlice_ = {"_p_p_GoSlice_", "coin__UxArray **|GoSlice_ **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_coin__Block = {"_p_p_coin__Block", "coin__Block **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_coin__BlockHeader = {"_p_p_coin__BlockHeader", "coin__BlockHeader **", 0, 0, (void*)0, 0};
@@ -1795,8 +1795,8 @@ static int le_swig__p_p_coin__Block=0; /* handle for _p_p_coin__Block */
 static int le_swig__p_cipher_PubKeys=0; /* handle for cipher_PubKeys */
 static int le_swig__p_unsigned_int=0; /* handle for _p_unsigned_int */
 static int le_swig__p_a_4__unsigned_char=0; /* handle for _p_a_4__unsigned_char */
-static int le_swig__p_a_20__unsigned_char=0; /* handle for _p_a_20__unsigned_char */
 static int le_swig__p_a_33__unsigned_char=0; /* handle for _p_a_33__unsigned_char */
+static int le_swig__p_a_20__unsigned_char=0; /* handle for _p_a_20__unsigned_char */
 static int le_swig__p_a_65__unsigned_char=0; /* handle for _p_a_65__unsigned_char */
 static int le_swig__p_a_32__unsigned_char=0; /* handle for _p_a_32__unsigned_char */
 static int le_swig__p_unsigned_char=0; /* handle for _p_unsigned_char */
@@ -5540,6 +5540,534 @@ fail:
 }
 
 
+ZEND_NAMED_FUNCTION(_wrap_SKY_iputil_LocalhostIP) {
+  GoString_ *arg1 = (GoString_ *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_iputil_LocalhostIP. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_iputil_LocalhostIP(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_iputil_IsLocalhost) {
+  GoString arg1 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_iputil_IsLocalhost. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_iputil_IsLocalhost. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_iputil_IsLocalhost(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_iputil_SplitAddr) {
+  GoString arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoUint16 *arg3 = (GoUint16 *) 0 ;
+  GoString *tmp1 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_iputil_SplitAddr. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_iputil_SplitAddr. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_short, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_iputil_SplitAddr. Expected SWIGTYPE_p_unsigned_short");
+  }
+  
+  result = (GoUint32)SKY_iputil_SplitAddr(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreateTransactionResponse) {
+  Transaction__Handle arg1 ;
+  GoSlice arg2 ;
+  CreateTransactionResponse__Handle *arg3 = (CreateTransactionResponse__Handle *) 0 ;
+  GoSlice *tmp2 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreateTransactionResponse. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_NewCreateTransactionResponse. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_NewCreateTransactionResponse(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreatedTransaction) {
+  Transaction__Handle arg1 ;
+  GoSlice arg2 ;
+  CreatedTransaction__Handle *arg3 = (CreatedTransaction__Handle *) 0 ;
+  GoSlice *tmp2 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreatedTransaction. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_NewCreatedTransaction. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_NewCreatedTransaction(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_CreatedTransaction_ToTransaction) {
+  CreatedTransaction__Handle arg1 ;
+  Transaction__Handle *arg2 = (Transaction__Handle *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (CreatedTransaction__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (CreatedTransaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (CreatedTransaction__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_CreatedTransaction_ToTransaction. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_CreatedTransaction_ToTransaction(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreatedTransactionOutput) {
+  coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  CreatedTransactionOutput__Handle *arg3 = (CreatedTransactionOutput__Handle *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__TransactionOutput, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_api_NewCreatedTransactionOutput. Expected SWIGTYPE_p_coin__TransactionOutput");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreatedTransactionOutput. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_NewCreatedTransactionOutput. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_NewCreatedTransactionOutput(arg1,(unsigned char (*)[32])arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreatedTransactionInput) {
+  api__TransactionInput *arg1 = (api__TransactionInput *) 0 ;
+  CreatedTransactionInput__Handle *arg2 = (CreatedTransactionInput__Handle *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_api__TransactionInput, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_api_NewCreatedTransactionInput. Expected SWIGTYPE_p_api__TransactionInput");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreatedTransactionInput. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_NewCreatedTransactionInput(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewReadableEntry) {
+  GoString arg1 ;
+  wallet__Entry *arg2 = (wallet__Entry *) 0 ;
+  ReadableEntry__Handle *arg3 = (ReadableEntry__Handle *) 0 ;
+  GoString *tmp1 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_NewReadableEntry. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Entry, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_NewReadableEntry. Expected SWIGTYPE_p_wallet__Entry");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_NewReadableEntry. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_wallet_NewReadableEntry(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_LoadReadableWallet) {
+  GoString arg1 ;
+  ReadableWallet__Handle *arg2 = (ReadableWallet__Handle *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_LoadReadableWallet. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_LoadReadableWallet. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_wallet_LoadReadableWallet(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_ReadableWallet_Save) {
+  ReadableWallet__Handle arg1 ;
+  GoString arg2 ;
+  GoString *tmp2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (ReadableWallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (ReadableWallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (ReadableWallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_ReadableWallet_Save. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint32)SKY_wallet_ReadableWallet_Save(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_ReadableWallet_Load) {
+  ReadableWallet__Handle arg1 ;
+  GoString arg2 ;
+  GoString *tmp2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (ReadableWallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (ReadableWallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (ReadableWallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_ReadableWallet_Load. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint32)SKY_wallet_ReadableWallet_Load(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_ReadableWallet_Erase) {
+  ReadableWallet__Handle arg1 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (ReadableWallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (ReadableWallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (ReadableWallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_wallet_ReadableWallet_Erase(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
 ZEND_NAMED_FUNCTION(_wrap_SKY_coin_Create_Transaction) {
   Transaction__Handle *arg1 = (Transaction__Handle *) 0 ;
   zval args[1];
@@ -7899,4214 +8427,6 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_PubkeyFromSeckey) {
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_PubkeyFromSeckey. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_secp256k1_PubkeyFromSeckey. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_secp256k1_PubkeyFromSeckey(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_VerifyPubkey) {
-  GoSlice arg1 ;
-  GoSlice *tmp1 ;
-  zval args[1];
-  GoInt result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_VerifyPubkey. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  result = (GoInt)SKY_secp256k1_VerifyPubkey(arg1);
-  
-  if ((long long)LONG_MIN <= result && result <= (long long)LONG_MAX) {
-    RETVAL_LONG((long)(result));
-  } else {
-    char temp[256];
-    sprintf(temp, "%lld", (long long)result);
-    RETVAL_STRING(temp);
-  }
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_VerifySecKey) {
-  GoSlice arg1 ;
-  GoSlice *tmp1 ;
-  zval args[1];
-  GoInt result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_VerifySecKey. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  result = (GoInt)SKY_secp256k1_VerifySecKey(arg1);
-  
-  if ((long long)LONG_MIN <= result && result <= (long long)LONG_MAX) {
-    RETVAL_LONG((long)(result));
-  } else {
-    char temp[256];
-    sprintf(temp, "%lld", (long long)result);
-    RETVAL_STRING(temp);
-  }
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_ECDH) {
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  GoSlice *tmp2 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_ECDH. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_secp256k1_ECDH. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_secp256k1_ECDH. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_secp256k1_ECDH(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_LoadConfig) {
-  Config__Handle *arg1 = (Config__Handle *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_LoadConfig. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_cli_LoadConfig(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_FullWalletPath) {
-  Config__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Config__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Config__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_FullWalletPath. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_Config_FullWalletPath(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_FullDBPath) {
-  Config__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Config__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Config__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_FullDBPath. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_Config_FullDBPath(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_NewCLI) {
-  Config__Handle arg1 ;
-  CLI__Handle *arg2 = (CLI__Handle *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Config__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Config__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_NewCLI. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_cli_NewCLI(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_NewPasswordReader) {
-  GoSlice arg1 ;
-  PasswordReader__Handle *arg2 = (PasswordReader__Handle *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_NewPasswordReader. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_NewPasswordReader. Expected SWIGTYPE_p_long_long");
-  }
-  
-  SKY_cli_NewPasswordReader(arg1,arg2);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_PasswordFromBytes_Password) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_PasswordFromBytes_Password. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_PasswordFromBytes_Password. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cli_PasswordFromBytes_Password(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_PasswordFromTerm_Password) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_PasswordFromTerm_Password. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cli_PasswordFromTerm_Password(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_JsonEncode_Handle) {
-  Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_JsonEncode_Handle. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_JsonEncode_Handle(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Progress_GetCurrent) {
-  Handle arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Progress_GetCurrent. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_Handle_Progress_GetCurrent(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Block_GetHeadSeq) {
-  Handle arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Block_GetHeadSeq. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_Handle_Block_GetHeadSeq(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Block_GetHeadHash) {
-  Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Block_GetHeadHash. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_Handle_Block_GetHeadHash(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Block_GetPreviousBlockHash) {
-  Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Block_GetPreviousBlockHash. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_Handle_Block_GetPreviousBlockHash(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Blocks_GetAt) {
-  Handle arg1 ;
-  GoUint64 arg2 ;
-  Handle *arg3 = (Handle *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_Handle_Blocks_GetAt. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_Handle_Blocks_GetAt(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Blocks_GetCount) {
-  Handle arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Blocks_GetCount. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_Handle_Blocks_GetCount(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Connections_GetCount) {
-  Handle arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Connections_GetCount. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_Handle_Connections_GetCount(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Strings_GetCount) {
-  Strings__Handle arg1 ;
-  GoUint32 *arg2 = (GoUint32 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Strings__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Strings__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Strings__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Strings_GetCount. Expected SWIGTYPE_p_unsigned_int");
-  }
-  
-  result = (GoUint32)SKY_Handle_Strings_GetCount(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Strings_Sort) {
-  Strings__Handle arg1 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Strings__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Strings__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Strings__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_Handle_Strings_Sort(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Strings_GetAt) {
-  Strings__Handle arg1 ;
-  GoInt arg2 ;
-  GoString_ *arg3 = (GoString_ *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Strings__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Strings__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Strings__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoInt) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoInt) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_Handle_Strings_GetAt. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_Handle_Strings_GetAt(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletDir) {
-  Client__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Client__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Client__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Client__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletDir. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_Client_GetWalletDir(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletFileName) {
-  WalletResponse__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletFileName. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_Client_GetWalletFileName(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletLabel) {
-  WalletResponse__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletLabel. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_Client_GetWalletLabel(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletFullPath) {
-  Client__Handle arg1 ;
-  WalletResponse__Handle arg2 ;
-  GoString_ *arg3 = (GoString_ *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Client__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Client__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Client__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (WalletResponse__Handle) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (WalletResponse__Handle) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_Client_GetWalletFullPath. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_Client_GetWalletFullPath(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletMeta) {
-  Wallet__Handle arg1 ;
-  GoStringMap_ *arg2 = (GoStringMap_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletMeta. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_GetWalletMeta(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletEntriesCount) {
-  Wallet__Handle arg1 ;
-  GoUint32 *arg2 = (GoUint32 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletEntriesCount. Expected SWIGTYPE_p_unsigned_int");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_GetWalletEntriesCount(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletResponseEntriesCount) {
-  WalletResponse__Handle arg1 ;
-  GoUint32 *arg2 = (GoUint32 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletResponseEntriesCount. Expected SWIGTYPE_p_unsigned_int");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_Client_GetWalletResponseEntriesCount(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletGetEntry) {
-  Wallet__Handle arg1 ;
-  GoUint32 arg2 ;
-  cipher__Address *arg3 = (cipher__Address *) 0 ;
-  cipher__PubKey *arg4 = (cipher__PubKey *) 0 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (GoUint32) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_WalletGetEntry. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_api_Handle_WalletGetEntry. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_WalletGetEntry(arg1,arg2,arg3,(unsigned char (*)[33])arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletResponseGetEntry) {
-  WalletResponse__Handle arg1 ;
-  GoUint32 arg2 ;
-  GoString_ *arg3 = (GoString_ *) 0 ;
-  GoString_ *arg4 = (GoString_ *) 0 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (GoUint32) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_WalletResponseGetEntry. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_api_Handle_WalletResponseGetEntry. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_WalletResponseGetEntry(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletResponseIsEncrypted) {
-  WalletResponse__Handle arg1 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_WalletResponseIsEncrypted. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_WalletResponseIsEncrypted(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletResponseGetCryptoType) {
-  WalletResponse__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_WalletResponseGetCryptoType. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_WalletResponseGetCryptoType(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletsResponseGetCount) {
-  Wallets__Handle arg1 ;
-  GoUint32 *arg2 = (GoUint32 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallets__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallets__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallets__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_WalletsResponseGetCount. Expected SWIGTYPE_p_unsigned_int");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_WalletsResponseGetCount(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletsResponseGetAt) {
-  Wallets__Handle arg1 ;
-  GoUint32 arg2 ;
-  WalletResponse__Handle *arg3 = (WalletResponse__Handle *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallets__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallets__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallets__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (GoUint32) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_WalletsResponseGetAt. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_WalletsResponseGetAt(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletFolderAddress) {
-  Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletFolderAddress. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_GetWalletFolderAddress(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletSeed) {
-  Wallet__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletSeed. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_GetWalletSeed(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletLastSeed) {
-  Wallet__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletLastSeed. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_GetWalletLastSeed(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetBuildInfoData) {
-  BuildInfo_Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoString_ *arg3 = (GoString_ *) 0 ;
-  GoString_ *arg4 = (GoString_ *) 0 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (BuildInfo_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (BuildInfo_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (BuildInfo_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetBuildInfoData. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_GetBuildInfoData. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_api_Handle_GetBuildInfoData. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_api_Handle_GetBuildInfoData(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_CryptoTypeFromString) {
-  GoString arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_CryptoTypeFromString. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_CryptoTypeFromString. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_wallet_CryptoTypeFromString(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_apputil_CatchInterruptPanic) {
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 0) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  result = (GoUint32)SKY_apputil_CatchInterruptPanic();
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_apputil_CatchDebug) {
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 0) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  result = (GoUint32)SKY_apputil_CatchDebug();
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_apputil_PrintProgramStatus) {
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 0) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  result = (GoUint32)SKY_apputil_PrintProgramStatus();
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_map_Get) {
-  GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
-  GoString arg2 ;
-  GoString_ *arg3 = (GoString_ *) 0 ;
-  GoString *tmp2 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_map_Get. Expected SWIGTYPE_p_long_long");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_map_Get. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_map_Get. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_map_Get(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_map_HasKey) {
-  GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
-  GoString arg2 ;
-  GoString *tmp2 ;
-  zval args[2];
-  GoUint8 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_map_HasKey. Expected SWIGTYPE_p_long_long");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_map_HasKey. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint8)SKY_map_HasKey(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_map_Close) {
-  GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_map_Close. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_map_Close(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_fee_VerifyTransactionFee) {
-  Transaction__Handle arg1 ;
-  GoUint64 arg2 ;
-  GoUint32 arg3 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg3 = (GoUint32) zval_get_long(&args[2]);
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_fee_VerifyTransactionFee(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_fee_VerifyTransactionFeeForHours) {
-  GoUint64 arg1 ;
-  GoUint64 arg2 ;
-  GoUint32 arg3 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg3 = (GoUint32) zval_get_long(&args[2]);
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_fee_VerifyTransactionFeeForHours(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_fee_RequiredFee) {
-  GoUint64 arg1 ;
-  GoUint32 arg2 ;
-  GoUint64 *arg3 = (GoUint64 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (GoUint32) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_fee_RequiredFee. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_fee_RequiredFee(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_fee_RemainingHours) {
-  GoUint64 arg1 ;
-  GoUint32 arg2 ;
-  GoUint64 *arg3 = (GoUint64 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg2 = (GoUint32) zval_get_long(&args[1]);
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_fee_RemainingHours. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_fee_RemainingHours(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_fee_TransactionFee) {
-  Transaction__Handle arg1 ;
-  GoUint64 arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoUint64 *arg4 = (GoUint64 *) 0 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_fee_TransactionFee. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_fee_TransactionFee. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_fee_TransactionFee(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Ripemd160_Set) {
-  cipher__Ripemd160 *arg1 = (cipher__Ripemd160 *) 0 ;
-  GoSlice arg2 ;
-  GoSlice *tmp2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_20__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Ripemd160_Set. Expected SWIGTYPE_p_a_20__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Ripemd160_Set. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint32)SKY_cipher_Ripemd160_Set((unsigned char (*)[20])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_HashRipemd160) {
-  GoSlice arg1 ;
-  cipher__Ripemd160 *arg2 = (cipher__Ripemd160 *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_HashRipemd160. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_20__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_HashRipemd160. Expected SWIGTYPE_p_a_20__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_HashRipemd160(arg1,(unsigned char (*)[20])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Set) {
-  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
-  GoSlice arg2 ;
-  GoSlice *tmp2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Set. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Set. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint32)SKY_cipher_SHA256_Set((unsigned char (*)[32])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Hex) {
-  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Hex. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Hex. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cipher_SHA256_Hex((unsigned char (*)[32])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Xor) {
-  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Xor. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Xor. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_SHA256_Xor. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SHA256_Xor((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[32])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SumSHA256) {
-  GoSlice arg1 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SumSHA256. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SumSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SumSHA256(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256FromHex) {
-  GoString arg1 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256FromHex. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256FromHex. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SHA256FromHex(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DoubleSHA256) {
-  GoSlice arg1 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DoubleSHA256. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DoubleSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_DoubleSHA256(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddSHA256) {
-  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_AddSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_AddSHA256((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[32])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Merkle) {
-  GoSlice *arg1 = (GoSlice *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Merkle. Expected SWIGTYPE_p_GoSlice");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Merkle. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_Merkle(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Null) {
-  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Null. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Null. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SHA256_Null((unsigned char (*)[32])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_RandByte) {
-  GoInt arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoInt) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoInt) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoInt) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_RandByte. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cipher_RandByte(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_NewPubKey) {
-  GoSlice arg1 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_NewPubKey. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_NewPubKey. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_NewPubKey(arg1,(unsigned char (*)[33])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyFromHex) {
-  GoString arg1 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyFromHex. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyFromHex. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_PubKeyFromHex(arg1,(unsigned char (*)[33])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyFromSecKey) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyFromSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyFromSecKey. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_PubKeyFromSecKey((unsigned char (*)[32])arg1,(unsigned char (*)[33])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyFromSig) {
-  cipher__Sig *arg1 = (cipher__Sig *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  cipher__PubKey *arg3 = (cipher__PubKey *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyFromSig. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyFromSig. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_PubKeyFromSig. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_PubKeyFromSig((unsigned char (*)[65])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[33])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKey_Verify) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKey_Verify. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_PubKey_Verify((unsigned char (*)[33])arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKey_Hex) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKey_Hex. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKey_Hex. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cipher_PubKey_Hex((unsigned char (*)[33])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyRipemd160) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__Ripemd160 *arg2 = (cipher__Ripemd160 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyRipemd160. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_20__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyRipemd160. Expected SWIGTYPE_p_a_20__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_PubKeyRipemd160((unsigned char (*)[33])arg1,(unsigned char (*)[20])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_NewSecKey) {
-  GoSlice arg1 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_NewSecKey. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_NewSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_NewSecKey(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKeyFromHex) {
-  GoString arg1 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKeyFromHex. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SecKeyFromHex. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SecKeyFromHex(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKey_Verify) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKey_Verify. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SecKey_Verify((unsigned char (*)[32])arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKey_Hex) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKey_Hex. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SecKey_Hex. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cipher_SecKey_Hex((unsigned char (*)[32])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_ECDH) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_ECDH. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_ECDH. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_ECDH. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cipher_ECDH((unsigned char (*)[33])arg1,(unsigned char (*)[32])arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_NewSig) {
-  GoSlice arg1 ;
-  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_NewSig. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_NewSig. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_NewSig(arg1,(unsigned char (*)[65])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SigFromHex) {
-  GoString arg1 ;
-  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SigFromHex. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SigFromHex. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SigFromHex(arg1,(unsigned char (*)[65])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Sig_Hex) {
-  cipher__Sig *arg1 = (cipher__Sig *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Sig_Hex. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Sig_Hex. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cipher_Sig_Hex((unsigned char (*)[65])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SignHash) {
-  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  cipher__Sig *arg3 = (cipher__Sig *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SignHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SignHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_SignHash. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SignHash((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[65])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_VerifyAddressSignedHash) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
-  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_VerifyAddressSignedHash. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_VerifyAddressSignedHash. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_VerifyAddressSignedHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_VerifyAddressSignedHash(arg1,(unsigned char (*)[65])arg2,(unsigned char (*)[32])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_VerifyPubKeySignedHash) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
-  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_VerifyPubKeySignedHash. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_VerifyPubKeySignedHash. Expected SWIGTYPE_p_a_65__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_VerifyPubKeySignedHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_VerifyPubKeySignedHash((unsigned char (*)[33])arg1,(unsigned char (*)[65])arg2,(unsigned char (*)[32])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateKeyPair) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateKeyPair. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_GenerateKeyPair. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_GenerateKeyPair((unsigned char (*)[33])arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateDeterministicKeyPair) {
-  GoSlice arg1 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  cipher__SecKey *arg3 = (cipher__SecKey *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateDeterministicKeyPair. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_GenerateDeterministicKeyPair. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_GenerateDeterministicKeyPair. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_GenerateDeterministicKeyPair(arg1,(unsigned char (*)[33])arg2,(unsigned char (*)[32])arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DeterministicKeyPairIterator) {
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  cipher__PubKey *arg3 = (cipher__PubKey *) 0 ;
-  cipher__SecKey *arg4 = (cipher__SecKey *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_DeterministicKeyPairIterator(arg1,arg2,(unsigned char (*)[33])arg3,(unsigned char (*)[32])arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateDeterministicKeyPairs) {
-  GoSlice arg1 ;
-  GoInt arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateDeterministicKeyPairs. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoInt) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoInt) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_GenerateDeterministicKeyPairs. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cipher_GenerateDeterministicKeyPairs(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed) {
-  GoSlice arg1 ;
-  GoInt arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateDeterministicKeyPairsSeed. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoInt) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoInt) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_GenerateDeterministicKeyPairsSeed. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cipher_GenerateDeterministicKeyPairsSeed. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cipher_GenerateDeterministicKeyPairsSeed(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_CheckSecKey) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_CheckSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_CheckSecKey((unsigned char (*)[32])arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_CheckSecKeyHash) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_CheckSecKeyHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_CheckSecKeyHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_CheckSecKeyHash((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_testutil_MakeAddress) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_testutil_MakeAddress. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  result = (GoUint32)SKY_testutil_MakeAddress(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_iputil_LocalhostIP) {
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_iputil_LocalhostIP. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_iputil_LocalhostIP(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_iputil_IsLocalhost) {
-  GoString arg1 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_iputil_IsLocalhost. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_iputil_IsLocalhost. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_iputil_IsLocalhost(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_iputil_SplitAddr) {
-  GoString arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoUint16 *arg3 = (GoUint16 *) 0 ;
-  GoString *tmp1 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_iputil_SplitAddr. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_iputil_SplitAddr. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_short, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_iputil_SplitAddr. Expected SWIGTYPE_p_unsigned_short");
-  }
-  
-  result = (GoUint32)SKY_iputil_SplitAddr(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_AddPrivateKey) {
-  Wallet__Handle arg1 ;
-  GoString arg2 ;
-  GoString *tmp2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_AddPrivateKey. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint32)SKY_cli_AddPrivateKey(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_AddPrivateKeyToFile) {
-  GoString arg1 ;
-  GoString arg2 ;
-  PasswordReader__Handle arg3 ;
-  GoString *tmp1 ;
-  GoString *tmp2 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_AddPrivateKeyToFile. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_AddPrivateKeyToFile. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (PasswordReader__Handle) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (PasswordReader__Handle) strtoll(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (PasswordReader__Handle) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_cli_AddPrivateKeyToFile(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_GenerateWallet) {
-  GoString arg1 ;
-  Options__Handle *arg2 = (Options__Handle *) 0 ;
-  GoUint64 arg3 ;
-  Wallet__Handle *arg4 = (Wallet__Handle *) 0 ;
-  GoString *tmp1 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_GenerateWallet. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_GenerateWallet. Expected SWIGTYPE_p_long_long");
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (GoUint64) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (GoUint64) strtoull(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (GoUint64) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cli_GenerateWallet. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_cli_GenerateWallet(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_MakeAlphanumericSeed) {
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_MakeAlphanumericSeed. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_MakeAlphanumericSeed(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_encrypt_ScryptChacha20poly1305_Encrypt) {
-  encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
-  GoSlice arg2 ;
-  GoSlice arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice *tmp2 ;
-  GoSlice *tmp3 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_encrypt__ScryptChacha20poly1305, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_encrypt__ScryptChacha20poly1305");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg3 = *tmp3;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_encrypt_ScryptChacha20poly1305_Encrypt(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_encrypt_ScryptChacha20poly1305_Decrypt) {
-  encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
-  GoSlice arg2 ;
-  GoSlice arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice *tmp2 ;
-  GoSlice *tmp3 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_encrypt__ScryptChacha20poly1305, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_encrypt__ScryptChacha20poly1305");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg3 = *tmp3;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_encrypt_ScryptChacha20poly1305_Decrypt(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_ChooseSpendsMaximizeUxOuts) {
-  GoSlice arg1 ;
-  GoUint64 arg2 ;
-  GoUint64 arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_transaction_ChooseSpendsMaximizeUxOuts. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (GoUint64) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (GoUint64) strtoull(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (GoUint64) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_transaction_ChooseSpendsMaximizeUxOuts. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_transaction_ChooseSpendsMaximizeUxOuts(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_ChooseSpendsMinimizeUxOuts) {
-  GoSlice arg1 ;
-  GoUint64 arg2 ;
-  GoUint64 arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_transaction_ChooseSpendsMinimizeUxOuts. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (GoUint64) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (GoUint64) strtoull(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (GoUint64) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_transaction_ChooseSpendsMinimizeUxOuts. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_transaction_ChooseSpendsMinimizeUxOuts(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_NewUxBalance) {
-  GoUint64 arg1 ;
-  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
-  transaction__UxBalance *arg3 = (transaction__UxBalance *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_coin__UxOut, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_transaction_NewUxBalance. Expected SWIGTYPE_p_coin__UxOut");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_transaction__UxBalance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_transaction_NewUxBalance. Expected SWIGTYPE_p_transaction__UxBalance");
-  }
-  
-  result = (GoUint32)SKY_transaction_NewUxBalance(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_NewUxBalances) {
-  GoUint64 arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_transaction_NewUxBalances. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_transaction_NewUxBalances. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_transaction_NewUxBalances(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
 ZEND_NAMED_FUNCTION(_wrap_SKY_base58_Hex2Base58) {
   GoSlice arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
@@ -12243,49 +8563,35 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_DistributeCoinHoursProportional) {
-  GoSlice arg1 ;
-  GoUint64 arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[3];
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_CLI_Run) {
+  CLI__Handle arg1 ;
+  zval args[1];
   GoUint32 result;
   
   SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
     WRONG_PARAM_COUNT;
   }
   
   
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_transaction_DistributeCoinHoursProportional. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
   case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
+    arg1 = (CLI__Handle) Z_DVAL(args[0]);
     break;
     case IS_STRING: {
       char * endptr;
       errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      arg1 = (CLI__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
       if (*endptr && !errno) break;
       /* FALL THRU */
     }
   default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
+    arg1 = (CLI__Handle) zval_get_long(&args[0]);
   }
   /*@SWIG@*/;
   
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_transaction_DistributeCoinHoursProportional. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_transaction_DistributeCoinHoursProportional(arg1,arg2,arg3);
+  result = (GoUint32)SKY_cli_CLI_Run(arg1);
   
   RETVAL_LONG(result);
   
@@ -12296,78 +8602,156 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_DistributeSpendHours) {
-  GoUint64 arg1 ;
-  GoUint64 arg2 ;
-  GoUint8 arg3 ;
-  GoUint64 *arg4 = (GoUint64 *) 0 ;
-  coin__UxArray *arg5 = (coin__UxArray *) 0 ;
-  GoUint64 *arg6 = (GoUint64 *) 0 ;
-  zval args[6];
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_GetCoin) {
+  Config__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
   GoUint32 result;
   
   SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 6 || zend_get_parameters_array_ex(6, args) != SUCCESS) {
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
     WRONG_PARAM_COUNT;
   }
   
   
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
   switch (Z_TYPE(args[0])) {
   case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
+    arg1 = (Config__Handle) Z_DVAL(args[0]);
     break;
     case IS_STRING: {
       char * endptr;
       errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
       if (*endptr && !errno) break;
       /* FALL THRU */
     }
   default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
+    arg1 = (Config__Handle) zval_get_long(&args[0]);
   }
   /*@SWIG@*/;
   
   
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_GetCoin. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_Config_GetCoin(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_GetRPCAddress) {
+  Config__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
   case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
+    arg1 = (Config__Handle) Z_DVAL(args[0]);
     break;
     case IS_STRING: {
       char * endptr;
       errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
       if (*endptr && !errno) break;
       /* FALL THRU */
     }
   default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
+    arg1 = (Config__Handle) zval_get_long(&args[0]);
   }
   /*@SWIG@*/;
   
   
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg3 = (GoUint8) zval_get_long(&args[2]);
-  /*@SWIG@*/;
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_GetRPCAddress. Expected SWIGTYPE_p_GoString_");
+  }
   
+  result = (GoUint32)SKY_cli_Config_GetRPCAddress(arg1,arg2);
   
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_transaction_DistributeSpendHours. Expected SWIGTYPE_p_unsigned_long_long");
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Getenv) {
+  GoString arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
   }
   
   
-  if (SWIG_ConvertPtr(&args[4], (void **) &arg5, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 5 of SKY_transaction_DistributeSpendHours. Expected SWIGTYPE_p_GoSlice_");
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_Getenv. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Getenv. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_Getenv(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Setenv) {
+  GoString arg1 ;
+  GoString arg2 ;
+  GoString *tmp1 ;
+  GoString *tmp2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
   }
   
   
-  if (SWIG_ConvertPtr(&args[5], (void **) &arg6, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 6 of SKY_transaction_DistributeSpendHours. Expected SWIGTYPE_p_unsigned_long_long");
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_Setenv. Expected SWIGTYPE_p__GoString_");
   }
+  arg1 = *tmp1;
   
-  result = (GoUint32)SKY_transaction_DistributeSpendHours(arg1,arg2,arg3,arg4,arg5,arg6);
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Setenv. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint32)SKY_cli_Setenv(arg1,arg2);
   
   RETVAL_LONG(result);
   
@@ -14824,1813 +11208,6 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_CreateOptionsHandle) {
-  GoString arg1 ;
-  GoString arg2 ;
-  GoString arg3 ;
-  GoUint8 arg4 ;
-  GoString arg5 ;
-  GoString arg6 ;
-  GoUint64 arg7 ;
-  Options__Handle *arg8 = (Options__Handle *) 0 ;
-  GoString *tmp1 ;
-  GoString *tmp2 ;
-  GoString *tmp3 ;
-  GoString *tmp5 ;
-  GoString *tmp6 ;
-  zval args[8];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 8 || zend_get_parameters_array_ex(8, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p__GoString_, 0) < 0 || tmp3 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
-  }
-  arg3 = *tmp3;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg4 = (GoUint8) zval_get_long(&args[3]);
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[4], (void **) &tmp5, SWIGTYPE_p__GoString_, 0) < 0 || tmp5 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 5 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
-  }
-  arg5 = *tmp5;
-  
-  
-  if (SWIG_ConvertPtr(&args[5], (void **) &tmp6, SWIGTYPE_p__GoString_, 0) < 0 || tmp6 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 6 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
-  }
-  arg6 = *tmp6;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[6])) {
-  case IS_DOUBLE:
-    arg7 = (GoUint64) Z_DVAL(args[6]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg7 = (GoUint64) strtoull(Z_STRVAL(args[6]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg7 = (GoUint64) zval_get_long(&args[6]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[7], (void **) &arg8, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 8 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_wallet_CreateOptionsHandle(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewBalance) {
-  GoUint64 arg1 ;
-  GoUint64 arg2 ;
-  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_NewBalance. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  result = (GoUint32)SKY_wallet_NewBalance(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewBalanceFromUxOut) {
-  GoUint64 arg1 ;
-  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
-  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_coin__UxOut, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_NewBalanceFromUxOut. Expected SWIGTYPE_p_coin__UxOut");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_NewBalanceFromUxOut. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  result = (GoUint32)SKY_wallet_NewBalanceFromUxOut(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_Add) {
-  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
-  wallet__Balance *arg2 = (wallet__Balance *) 0 ;
-  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_Add. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_Add. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_Balance_Add. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  result = (GoUint32)SKY_wallet_Balance_Add(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_Sub) {
-  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
-  wallet__Balance *arg2 = (wallet__Balance *) 0 ;
-  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_Sub. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_Sub. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_Balance_Sub. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  result = (GoUint32)SKY_wallet_Balance_Sub(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_Equals) {
-  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
-  wallet__Balance *arg2 = (wallet__Balance *) 0 ;
-  GoUint8 *arg3 = (GoUint8 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_Equals. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_Equals. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_Balance_Equals. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_wallet_Balance_Equals(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_IsZero) {
-  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_IsZero. Expected SWIGTYPE_p_wallet__Balance");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_IsZero. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_wallet_Balance_IsZero(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DecodeBase58BitcoinAddress) {
-  GoString arg1 ;
-  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DecodeBase58BitcoinAddress. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DecodeBase58BitcoinAddress. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  result = (GoUint32)SKY_cipher_DecodeBase58BitcoinAddress(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddressFromPubKey) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddressFromPubKey. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddressFromPubKey. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  SKY_cipher_BitcoinAddressFromPubKey((unsigned char (*)[33])arg1,arg2);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddressFromSecKey) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddressFromSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddressFromSecKey. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  result = (GoUint32)SKY_cipher_BitcoinAddressFromSecKey((unsigned char (*)[32])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinWalletImportFormatFromSeckey. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinWalletImportFormatFromSeckey. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  SKY_cipher_BitcoinWalletImportFormatFromSeckey((unsigned char (*)[32])arg1,arg2);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddressFromBytes) {
-  GoSlice arg1 ;
-  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddressFromBytes. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddressFromBytes. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  result = (GoUint32)SKY_cipher_BitcoinAddressFromBytes(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKeyFromBitcoinWalletImportFormat) {
-  GoString arg1 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKeyFromBitcoinWalletImportFormat. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SecKeyFromBitcoinWalletImportFormat. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_SecKeyFromBitcoinWalletImportFormat(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Null) {
-  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
-  zval args[1];
-  GoUint8 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Null. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  result = (GoUint8)SKY_cipher_BitcoinAddress_Null(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Bytes) {
-  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Bytes. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_Bytes. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  SKY_cipher_BitcoinAddress_Bytes(arg1,arg2);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Verify) {
-  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Verify. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_Verify. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_BitcoinAddress_Verify(arg1,(unsigned char (*)[33])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_String) {
-  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_String. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_String. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  SKY_cipher_BitcoinAddress_String(arg1,arg2);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Checksum) {
-  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
-  cipher__Checksum *arg2 = (cipher__Checksum *) 0 ;
-  zval args[2];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Checksum. Expected SWIGTYPE_p_cipher__BitcoinAddress");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_4__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_Checksum. Expected SWIGTYPE_p_a_4__unsigned_char");
-  }
-  
-  SKY_cipher_BitcoinAddress_Checksum(arg1,(unsigned char (*)[4])arg2);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_handle_close) {
-  Handle arg1 ;
-  zval args[1];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  SKY_handle_close(arg1);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_handle_copy) {
-  Handle arg1 ;
-  Handle *arg2 = (Handle *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_handle_copy. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_handle_copy(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_CLI_Run) {
-  CLI__Handle arg1 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (CLI__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (CLI__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (CLI__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_cli_CLI_Run(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_GetCoin) {
-  Config__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Config__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Config__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_GetCoin. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_Config_GetCoin(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_GetRPCAddress) {
-  Config__Handle arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Config__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Config__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_GetRPCAddress. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_Config_GetRPCAddress(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Getenv) {
-  GoString arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_Getenv. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Getenv. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_Getenv(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Setenv) {
-  GoString arg1 ;
-  GoString arg2 ;
-  GoString *tmp1 ;
-  GoString *tmp2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_Setenv. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Setenv. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint32)SKY_cli_Setenv(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewWalletResponse) {
-  Wallet__Handle arg1 ;
-  WalletResponse__Handle *arg2 = (WalletResponse__Handle *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewWalletResponse. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_NewWalletResponse(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_util_AddUint64) {
-  GoUint64 arg1 ;
-  GoUint64 arg2 ;
-  GoUint64 *arg3 = (GoUint64 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_util_AddUint64. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_util_AddUint64(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_util_Uint64ToInt64) {
-  GoUint64 arg1 ;
-  GoInt64 *arg2 = (GoInt64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoUint64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoUint64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_util_Uint64ToInt64. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_util_Uint64ToInt64(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_util_Int64ToUint64) {
-  GoInt64 arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoInt64) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoInt64) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoInt64) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_util_Int64ToUint64. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_util_Int64ToUint64(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_util_IntToUint32) {
-  GoInt arg1 ;
-  GoUint32 *arg2 = (GoUint32 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoInt) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoInt) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoInt) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_util_IntToUint32. Expected SWIGTYPE_p_unsigned_int");
-  }
-  
-  result = (GoUint32)SKY_util_IntToUint32(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewDefaultMnemomic) {
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_NewDefaultMnemomic. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_bip39_NewDefaultMnemomic(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewEntropy) {
-  GoInt arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (GoInt) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (GoInt) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (GoInt) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_bip39_NewEntropy. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_bip39_NewEntropy(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewMnemonic) {
-  GoSlice arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_NewMnemonic. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_bip39_NewMnemonic. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_bip39_NewMnemonic(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_ValidateMnemonic) {
-  GoString arg1 ;
-  GoString *tmp1 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_ValidateMnemonic. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  result = (GoUint32)SKY_bip39_ValidateMnemonic(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewSeed) {
-  GoString arg1 ;
-  GoString arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoString *tmp1 ;
-  GoString *tmp2 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_NewSeed. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_bip39_NewSeed. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_bip39_NewSeed. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_bip39_NewSeed(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_params_DropletPrecisionToDivisor) {
-  GoUint8 arg1 ;
-  zval args[1];
-  GoUint64 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg1 = (GoUint8) zval_get_long(&args[0]);
-  /*@SWIG@*/;
-  
-  result = (GoUint64)SKY_params_DropletPrecisionToDivisor(arg1);
-  
-  if (result <= (unsigned long long)LONG_MAX) {
-    RETVAL_LONG((long)(result));
-  } else {
-    char temp[256];
-    sprintf(temp, "%llu", (unsigned long long)result);
-    RETVAL_STRING(temp);
-  }
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_params_DropletPrecisionCheck) {
-  GoUint8 arg1 ;
-  GoUint64 arg2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
-  arg1 = (GoUint8) zval_get_long(&args[0]);
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_params_DropletPrecisionCheck(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_NewTransaction) {
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoSlice arg3 ;
-  Transaction__Handle *arg4 = (Transaction__Handle *) 0 ;
-  GoSlice *tmp1 ;
-  GoSlice *tmp2 ;
-  GoSlice *tmp3 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg3 = *tmp3;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_cli_NewTransaction(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DecodeBase58Address) {
-  GoString arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DecodeBase58Address. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DecodeBase58Address. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  result = (GoUint32)SKY_cipher_DecodeBase58Address(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddressFromBytes) {
-  GoSlice arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddressFromBytes. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddressFromBytes. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  result = (GoUint32)SKY_cipher_AddressFromBytes(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddressFromPubKey) {
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddressFromPubKey. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddressFromPubKey. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  result = (GoUint32)SKY_cipher_AddressFromPubKey((unsigned char (*)[33])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddressFromSecKey) {
-  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddressFromSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddressFromSecKey. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  result = (GoUint32)SKY_cipher_AddressFromSecKey((unsigned char (*)[32])arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Null) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Null. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Null. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_Address_Null(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Bytes) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Bytes. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Bytes. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cipher_Address_Bytes(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Verify) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Verify. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Verify. Expected SWIGTYPE_p_a_33__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_Address_Verify(arg1,(unsigned char (*)[33])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_String) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_String. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_String. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cipher_Address_String(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Checksum) {
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  cipher__Checksum *arg2 = (cipher__Checksum *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Checksum. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_4__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Checksum. Expected SWIGTYPE_p_a_4__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_cipher_Address_Checksum(arg1,(unsigned char (*)[4])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
 ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewError) {
   GoInterface arg1 ;
   GoInterface *tmp1 ;
@@ -17376,6 +11953,6640 @@ fail:
 }
 
 
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Ripemd160_Set) {
+  cipher__Ripemd160 *arg1 = (cipher__Ripemd160 *) 0 ;
+  GoSlice arg2 ;
+  GoSlice *tmp2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_20__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Ripemd160_Set. Expected SWIGTYPE_p_a_20__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Ripemd160_Set. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint32)SKY_cipher_Ripemd160_Set((unsigned char (*)[20])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_HashRipemd160) {
+  GoSlice arg1 ;
+  cipher__Ripemd160 *arg2 = (cipher__Ripemd160 *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_HashRipemd160. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_20__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_HashRipemd160. Expected SWIGTYPE_p_a_20__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_HashRipemd160(arg1,(unsigned char (*)[20])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Set) {
+  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
+  GoSlice arg2 ;
+  GoSlice *tmp2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Set. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Set. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint32)SKY_cipher_SHA256_Set((unsigned char (*)[32])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Hex) {
+  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Hex. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Hex. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cipher_SHA256_Hex((unsigned char (*)[32])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Xor) {
+  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Xor. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Xor. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_SHA256_Xor. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SHA256_Xor((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[32])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SumSHA256) {
+  GoSlice arg1 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SumSHA256. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SumSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SumSHA256(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256FromHex) {
+  GoString arg1 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256FromHex. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256FromHex. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SHA256FromHex(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DoubleSHA256) {
+  GoSlice arg1 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DoubleSHA256. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DoubleSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_DoubleSHA256(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddSHA256) {
+  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_AddSHA256. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_AddSHA256((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[32])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Merkle) {
+  GoSlice *arg1 = (GoSlice *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Merkle. Expected SWIGTYPE_p_GoSlice");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Merkle. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_Merkle(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SHA256_Null) {
+  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SHA256_Null. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SHA256_Null. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SHA256_Null((unsigned char (*)[32])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_NewTransaction) {
+  GoSlice arg1 ;
+  GoSlice arg2 ;
+  GoSlice arg3 ;
+  Transaction__Handle *arg4 = (Transaction__Handle *) 0 ;
+  GoSlice *tmp1 ;
+  GoSlice *tmp2 ;
+  GoSlice *tmp3 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg3 = *tmp3;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cli_NewTransaction. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_cli_NewTransaction(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_handle_close) {
+  Handle arg1 ;
+  zval args[1];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  SKY_handle_close(arg1);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_handle_copy) {
+  Handle arg1 ;
+  Handle *arg2 = (Handle *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_handle_copy. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_handle_copy(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DecodeBase58Address) {
+  GoString arg1 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DecodeBase58Address. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DecodeBase58Address. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  result = (GoUint32)SKY_cipher_DecodeBase58Address(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddressFromBytes) {
+  GoSlice arg1 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddressFromBytes. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddressFromBytes. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  result = (GoUint32)SKY_cipher_AddressFromBytes(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddressFromPubKey) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddressFromPubKey. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddressFromPubKey. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  result = (GoUint32)SKY_cipher_AddressFromPubKey((unsigned char (*)[33])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_AddressFromSecKey) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_AddressFromSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_AddressFromSecKey. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  result = (GoUint32)SKY_cipher_AddressFromSecKey((unsigned char (*)[32])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Null) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Null. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Null. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_Address_Null(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Bytes) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Bytes. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Bytes. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cipher_Address_Bytes(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Verify) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Verify. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Verify. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_Address_Verify(arg1,(unsigned char (*)[33])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_String) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_String. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_String. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cipher_Address_String(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Address_Checksum) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  cipher__Checksum *arg2 = (cipher__Checksum *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Address_Checksum. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_4__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Address_Checksum. Expected SWIGTYPE_p_a_4__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_Address_Checksum(arg1,(unsigned char (*)[4])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DecodeBase58BitcoinAddress) {
+  GoString arg1 ;
+  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DecodeBase58BitcoinAddress. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DecodeBase58BitcoinAddress. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  result = (GoUint32)SKY_cipher_DecodeBase58BitcoinAddress(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddressFromPubKey) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddressFromPubKey. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddressFromPubKey. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  SKY_cipher_BitcoinAddressFromPubKey((unsigned char (*)[33])arg1,arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddressFromSecKey) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddressFromSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddressFromSecKey. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  result = (GoUint32)SKY_cipher_BitcoinAddressFromSecKey((unsigned char (*)[32])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinWalletImportFormatFromSeckey. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinWalletImportFormatFromSeckey. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  SKY_cipher_BitcoinWalletImportFormatFromSeckey((unsigned char (*)[32])arg1,arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddressFromBytes) {
+  GoSlice arg1 ;
+  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddressFromBytes. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddressFromBytes. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  result = (GoUint32)SKY_cipher_BitcoinAddressFromBytes(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKeyFromBitcoinWalletImportFormat) {
+  GoString arg1 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKeyFromBitcoinWalletImportFormat. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SecKeyFromBitcoinWalletImportFormat. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SecKeyFromBitcoinWalletImportFormat(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Null) {
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  zval args[1];
+  GoUint8 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Null. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  result = (GoUint8)SKY_cipher_BitcoinAddress_Null(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Bytes) {
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Bytes. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_Bytes. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  SKY_cipher_BitcoinAddress_Bytes(arg1,arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Verify) {
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Verify. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_Verify. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_BitcoinAddress_Verify(arg1,(unsigned char (*)[33])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_String) {
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_String. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_String. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  SKY_cipher_BitcoinAddress_String(arg1,arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_BitcoinAddress_Checksum) {
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  cipher__Checksum *arg2 = (cipher__Checksum *) 0 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__BitcoinAddress, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_BitcoinAddress_Checksum. Expected SWIGTYPE_p_cipher__BitcoinAddress");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_4__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_BitcoinAddress_Checksum. Expected SWIGTYPE_p_a_4__unsigned_char");
+  }
+  
+  SKY_cipher_BitcoinAddress_Checksum(arg1,(unsigned char (*)[4])arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_GenerateWallet) {
+  GoString arg1 ;
+  Options__Handle *arg2 = (Options__Handle *) 0 ;
+  GoUint64 arg3 ;
+  Wallet__Handle *arg4 = (Wallet__Handle *) 0 ;
+  GoString *tmp1 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_GenerateWallet. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_GenerateWallet. Expected SWIGTYPE_p_long_long");
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (GoUint64) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (GoUint64) strtoull(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (GoUint64) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cli_GenerateWallet. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_cli_GenerateWallet(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_MakeAlphanumericSeed) {
+  GoString_ *arg1 = (GoString_ *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_MakeAlphanumericSeed. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_MakeAlphanumericSeed(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_params_DropletPrecisionToDivisor) {
+  GoUint8 arg1 ;
+  zval args[1];
+  GoUint64 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg1 = (GoUint8) zval_get_long(&args[0]);
+  /*@SWIG@*/;
+  
+  result = (GoUint64)SKY_params_DropletPrecisionToDivisor(arg1);
+  
+  if (result <= (unsigned long long)LONG_MAX) {
+    RETVAL_LONG((long)(result));
+  } else {
+    char temp[256];
+    sprintf(temp, "%llu", (unsigned long long)result);
+    RETVAL_STRING(temp);
+  }
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_params_DropletPrecisionCheck) {
+  GoUint8 arg1 ;
+  GoUint64 arg2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg1 = (GoUint8) zval_get_long(&args[0]);
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_params_DropletPrecisionCheck(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_map_Get) {
+  GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
+  GoString arg2 ;
+  GoString_ *arg3 = (GoString_ *) 0 ;
+  GoString *tmp2 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_map_Get. Expected SWIGTYPE_p_long_long");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_map_Get. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_map_Get. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_map_Get(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_map_HasKey) {
+  GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
+  GoString arg2 ;
+  GoString *tmp2 ;
+  zval args[2];
+  GoUint8 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_map_HasKey. Expected SWIGTYPE_p_long_long");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_map_HasKey. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint8)SKY_map_HasKey(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_map_Close) {
+  GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_map_Close. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_map_Close(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Entry_Verify) {
+  wallet__Entry *arg1 = (wallet__Entry *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Entry, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Entry_Verify. Expected SWIGTYPE_p_wallet__Entry");
+  }
+  
+  result = (GoUint32)SKY_wallet_Entry_Verify(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Entry_VerifyPublic) {
+  wallet__Entry *arg1 = (wallet__Entry *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Entry, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Entry_VerifyPublic. Expected SWIGTYPE_p_wallet__Entry");
+  }
+  
+  result = (GoUint32)SKY_wallet_Entry_VerifyPublic(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_GenerateAddressesInFile) {
+  GoString arg1 ;
+  GoUint64 arg2 ;
+  PasswordReader__Handle arg3 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  GoString *tmp1 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_GenerateAddressesInFile. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (PasswordReader__Handle) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (PasswordReader__Handle) strtoll(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (PasswordReader__Handle) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cli_GenerateAddressesInFile. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cli_GenerateAddressesInFile(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_FormatAddressesAsJSON) {
+  GoSlice arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_FormatAddressesAsJSON. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_FormatAddressesAsJSON. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_FormatAddressesAsJSON(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_FormatAddressesAsJoinedArray) {
+  GoSlice arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_FormatAddressesAsJoinedArray. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_FormatAddressesAsJoinedArray. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_FormatAddressesAsJoinedArray(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_AddressesToStrings) {
+  GoSlice arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_AddressesToStrings. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_AddressesToStrings. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cli_AddressesToStrings(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_JsonEncode_Handle) {
+  Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_JsonEncode_Handle. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_JsonEncode_Handle(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Progress_GetCurrent) {
+  Handle arg1 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Progress_GetCurrent. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_Handle_Progress_GetCurrent(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Block_GetHeadSeq) {
+  Handle arg1 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Block_GetHeadSeq. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_Handle_Block_GetHeadSeq(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Block_GetHeadHash) {
+  Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Block_GetHeadHash. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_Handle_Block_GetHeadHash(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Block_GetPreviousBlockHash) {
+  Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Block_GetPreviousBlockHash. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_Handle_Block_GetPreviousBlockHash(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Blocks_GetAt) {
+  Handle arg1 ;
+  GoUint64 arg2 ;
+  Handle *arg3 = (Handle *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_Handle_Blocks_GetAt. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_Handle_Blocks_GetAt(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Blocks_GetCount) {
+  Handle arg1 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Blocks_GetCount. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_Handle_Blocks_GetCount(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Connections_GetCount) {
+  Handle arg1 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Connections_GetCount. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_Handle_Connections_GetCount(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Strings_GetCount) {
+  Strings__Handle arg1 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Strings__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Strings__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Strings__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_Handle_Strings_GetCount. Expected SWIGTYPE_p_unsigned_int");
+  }
+  
+  result = (GoUint32)SKY_Handle_Strings_GetCount(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Strings_Sort) {
+  Strings__Handle arg1 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Strings__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Strings__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Strings__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_Handle_Strings_Sort(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_Handle_Strings_GetAt) {
+  Strings__Handle arg1 ;
+  GoInt arg2 ;
+  GoString_ *arg3 = (GoString_ *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Strings__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Strings__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Strings__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoInt) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoInt) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_Handle_Strings_GetAt. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_Handle_Strings_GetAt(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletDir) {
+  Client__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Client__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Client__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Client__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletDir. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_Client_GetWalletDir(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletFileName) {
+  WalletResponse__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletFileName. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_Client_GetWalletFileName(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletLabel) {
+  WalletResponse__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletLabel. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_Client_GetWalletLabel(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletFullPath) {
+  Client__Handle arg1 ;
+  WalletResponse__Handle arg2 ;
+  GoString_ *arg3 = (GoString_ *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Client__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Client__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Client__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (WalletResponse__Handle) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (WalletResponse__Handle) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_Client_GetWalletFullPath. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_Client_GetWalletFullPath(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletMeta) {
+  Wallet__Handle arg1 ;
+  GoStringMap_ *arg2 = (GoStringMap_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletMeta. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_GetWalletMeta(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletEntriesCount) {
+  Wallet__Handle arg1 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletEntriesCount. Expected SWIGTYPE_p_unsigned_int");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_GetWalletEntriesCount(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_Client_GetWalletResponseEntriesCount) {
+  WalletResponse__Handle arg1 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_Client_GetWalletResponseEntriesCount. Expected SWIGTYPE_p_unsigned_int");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_Client_GetWalletResponseEntriesCount(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletGetEntry) {
+  Wallet__Handle arg1 ;
+  GoUint32 arg2 ;
+  cipher__Address *arg3 = (cipher__Address *) 0 ;
+  cipher__PubKey *arg4 = (cipher__PubKey *) 0 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (GoUint32) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_WalletGetEntry. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_api_Handle_WalletGetEntry. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_WalletGetEntry(arg1,arg2,arg3,(unsigned char (*)[33])arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletResponseGetEntry) {
+  WalletResponse__Handle arg1 ;
+  GoUint32 arg2 ;
+  GoString_ *arg3 = (GoString_ *) 0 ;
+  GoString_ *arg4 = (GoString_ *) 0 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (GoUint32) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_WalletResponseGetEntry. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_api_Handle_WalletResponseGetEntry. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_WalletResponseGetEntry(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletResponseIsEncrypted) {
+  WalletResponse__Handle arg1 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_WalletResponseIsEncrypted. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_WalletResponseIsEncrypted(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletResponseGetCryptoType) {
+  WalletResponse__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (WalletResponse__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (WalletResponse__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (WalletResponse__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_WalletResponseGetCryptoType. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_WalletResponseGetCryptoType(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletsResponseGetCount) {
+  Wallets__Handle arg1 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallets__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallets__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallets__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_WalletsResponseGetCount. Expected SWIGTYPE_p_unsigned_int");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_WalletsResponseGetCount(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_WalletsResponseGetAt) {
+  Wallets__Handle arg1 ;
+  GoUint32 arg2 ;
+  WalletResponse__Handle *arg3 = (WalletResponse__Handle *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallets__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallets__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallets__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (GoUint32) zval_get_long(&args[1]);
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_WalletsResponseGetAt. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_WalletsResponseGetAt(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletFolderAddress) {
+  Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletFolderAddress. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_GetWalletFolderAddress(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletSeed) {
+  Wallet__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletSeed. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_GetWalletSeed(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetWalletLastSeed) {
+  Wallet__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetWalletLastSeed. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_GetWalletLastSeed(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_Handle_GetBuildInfoData) {
+  BuildInfo_Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ *arg3 = (GoString_ *) 0 ;
+  GoString_ *arg4 = (GoString_ *) 0 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (BuildInfo_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (BuildInfo_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (BuildInfo_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_Handle_GetBuildInfoData. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_Handle_GetBuildInfoData. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_api_Handle_GetBuildInfoData. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_api_Handle_GetBuildInfoData(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_PubkeyFromSeckey) {
+  GoSlice arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_PubkeyFromSeckey. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_secp256k1_PubkeyFromSeckey. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_secp256k1_PubkeyFromSeckey(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_VerifyPubkey) {
+  GoSlice arg1 ;
+  GoSlice *tmp1 ;
+  zval args[1];
+  GoInt result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_VerifyPubkey. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  result = (GoInt)SKY_secp256k1_VerifyPubkey(arg1);
+  
+  if ((long long)LONG_MIN <= result && result <= (long long)LONG_MAX) {
+    RETVAL_LONG((long)(result));
+  } else {
+    char temp[256];
+    sprintf(temp, "%lld", (long long)result);
+    RETVAL_STRING(temp);
+  }
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_VerifySecKey) {
+  GoSlice arg1 ;
+  GoSlice *tmp1 ;
+  zval args[1];
+  GoInt result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_VerifySecKey. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  result = (GoInt)SKY_secp256k1_VerifySecKey(arg1);
+  
+  if ((long long)LONG_MIN <= result && result <= (long long)LONG_MAX) {
+    RETVAL_LONG((long)(result));
+  } else {
+    char temp[256];
+    sprintf(temp, "%lld", (long long)result);
+    RETVAL_STRING(temp);
+  }
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_secp256k1_ECDH) {
+  GoSlice arg1 ;
+  GoSlice arg2 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  GoSlice *tmp2 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_secp256k1_ECDH. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_secp256k1_ECDH. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_secp256k1_ECDH. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_secp256k1_ECDH(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_CryptoTypeFromString) {
+  GoString arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_CryptoTypeFromString. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_CryptoTypeFromString. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_wallet_CryptoTypeFromString(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewDefaultMnemomic) {
+  GoString_ *arg1 = (GoString_ *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_NewDefaultMnemomic. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_bip39_NewDefaultMnemomic(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewEntropy) {
+  GoInt arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoInt) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoInt) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoInt) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_bip39_NewEntropy. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_bip39_NewEntropy(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewMnemonic) {
+  GoSlice arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_NewMnemonic. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_bip39_NewMnemonic. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_bip39_NewMnemonic(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_ValidateMnemonic) {
+  GoString arg1 ;
+  GoString *tmp1 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_ValidateMnemonic. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  result = (GoUint32)SKY_bip39_ValidateMnemonic(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_bip39_NewSeed) {
+  GoString arg1 ;
+  GoString arg2 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  GoString *tmp1 ;
+  GoString *tmp2 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_bip39_NewSeed. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_bip39_NewSeed. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_bip39_NewSeed. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_bip39_NewSeed(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_RandByte) {
+  GoInt arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoInt) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoInt) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoInt) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_RandByte. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cipher_RandByte(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_NewPubKey) {
+  GoSlice arg1 ;
+  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_NewPubKey. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_NewPubKey. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_NewPubKey(arg1,(unsigned char (*)[33])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyFromHex) {
+  GoString arg1 ;
+  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyFromHex. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyFromHex. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_PubKeyFromHex(arg1,(unsigned char (*)[33])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyFromSecKey) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyFromSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyFromSecKey. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_PubKeyFromSecKey((unsigned char (*)[32])arg1,(unsigned char (*)[33])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyFromSig) {
+  cipher__Sig *arg1 = (cipher__Sig *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  cipher__PubKey *arg3 = (cipher__PubKey *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyFromSig. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyFromSig. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_PubKeyFromSig. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_PubKeyFromSig((unsigned char (*)[65])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[33])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKey_Verify) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKey_Verify. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_PubKey_Verify((unsigned char (*)[33])arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKey_Hex) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKey_Hex. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKey_Hex. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cipher_PubKey_Hex((unsigned char (*)[33])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_PubKeyRipemd160) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__Ripemd160 *arg2 = (cipher__Ripemd160 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_PubKeyRipemd160. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_20__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_PubKeyRipemd160. Expected SWIGTYPE_p_a_20__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_PubKeyRipemd160((unsigned char (*)[33])arg1,(unsigned char (*)[20])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_NewSecKey) {
+  GoSlice arg1 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_NewSecKey. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_NewSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_NewSecKey(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKeyFromHex) {
+  GoString arg1 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKeyFromHex. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SecKeyFromHex. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SecKeyFromHex(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKey_Verify) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKey_Verify. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SecKey_Verify((unsigned char (*)[32])arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SecKey_Hex) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SecKey_Hex. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SecKey_Hex. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cipher_SecKey_Hex((unsigned char (*)[32])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_ECDH) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_ECDH. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_ECDH. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_ECDH. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cipher_ECDH((unsigned char (*)[33])arg1,(unsigned char (*)[32])arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_NewSig) {
+  GoSlice arg1 ;
+  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_NewSig. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_NewSig. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_NewSig(arg1,(unsigned char (*)[65])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SigFromHex) {
+  GoString arg1 ;
+  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SigFromHex. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SigFromHex. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SigFromHex(arg1,(unsigned char (*)[65])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_Sig_Hex) {
+  cipher__Sig *arg1 = (cipher__Sig *) 0 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_Sig_Hex. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_Sig_Hex. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cipher_Sig_Hex((unsigned char (*)[65])arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_SignHash) {
+  cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  cipher__Sig *arg3 = (cipher__Sig *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_SignHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_SignHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_SignHash. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_SignHash((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2,(unsigned char (*)[65])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_VerifyAddressSignedHash) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
+  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_VerifyAddressSignedHash. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_VerifyAddressSignedHash. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_VerifyAddressSignedHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_VerifyAddressSignedHash(arg1,(unsigned char (*)[65])arg2,(unsigned char (*)[32])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_VerifyPubKeySignedHash) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
+  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_VerifyPubKeySignedHash. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_65__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_VerifyPubKeySignedHash. Expected SWIGTYPE_p_a_65__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_VerifyPubKeySignedHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_VerifyPubKeySignedHash((unsigned char (*)[33])arg1,(unsigned char (*)[65])arg2,(unsigned char (*)[32])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateKeyPair) {
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateKeyPair. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_GenerateKeyPair. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_GenerateKeyPair((unsigned char (*)[33])arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateDeterministicKeyPair) {
+  GoSlice arg1 ;
+  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
+  cipher__SecKey *arg3 = (cipher__SecKey *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateDeterministicKeyPair. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_GenerateDeterministicKeyPair. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_GenerateDeterministicKeyPair. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_GenerateDeterministicKeyPair(arg1,(unsigned char (*)[33])arg2,(unsigned char (*)[32])arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_DeterministicKeyPairIterator) {
+  GoSlice arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  cipher__PubKey *arg3 = (cipher__PubKey *) 0 ;
+  cipher__SecKey *arg4 = (cipher__SecKey *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_a_33__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_a_33__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cipher_DeterministicKeyPairIterator. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_DeterministicKeyPairIterator(arg1,arg2,(unsigned char (*)[33])arg3,(unsigned char (*)[32])arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateDeterministicKeyPairs) {
+  GoSlice arg1 ;
+  GoInt arg2 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateDeterministicKeyPairs. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoInt) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoInt) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_GenerateDeterministicKeyPairs. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cipher_GenerateDeterministicKeyPairs(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed) {
+  GoSlice arg1 ;
+  GoInt arg2 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_GenerateDeterministicKeyPairsSeed. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoInt) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoInt) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_cipher_GenerateDeterministicKeyPairsSeed. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cipher_GenerateDeterministicKeyPairsSeed. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cipher_GenerateDeterministicKeyPairsSeed(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_CheckSecKey) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_CheckSecKey. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_CheckSecKey((unsigned char (*)[32])arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cipher_CheckSecKeyHash) {
+  cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cipher_CheckSecKeyHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cipher_CheckSecKeyHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_cipher_CheckSecKeyHash((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_apputil_CatchInterruptPanic) {
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 0) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  result = (GoUint32)SKY_apputil_CatchInterruptPanic();
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_apputil_CatchDebug) {
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 0) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  result = (GoUint32)SKY_apputil_CatchDebug();
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_apputil_PrintProgramStatus) {
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 0) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  result = (GoUint32)SKY_apputil_PrintProgramStatus();
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_LoadConfig) {
+  Config__Handle *arg1 = (Config__Handle *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_LoadConfig. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_cli_LoadConfig(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_FullWalletPath) {
+  Config__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Config__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Config__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_FullWalletPath. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_Config_FullWalletPath(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_Config_FullDBPath) {
+  Config__Handle arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Config__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Config__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_Config_FullDBPath. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_cli_Config_FullDBPath(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_NewCLI) {
+  Config__Handle arg1 ;
+  CLI__Handle *arg2 = (CLI__Handle *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Config__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Config__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Config__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_NewCLI. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_cli_NewCLI(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_NewPasswordReader) {
+  GoSlice arg1 ;
+  PasswordReader__Handle *arg2 = (PasswordReader__Handle *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[2];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_NewPasswordReader. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_NewPasswordReader. Expected SWIGTYPE_p_long_long");
+  }
+  
+  SKY_cli_NewPasswordReader(arg1,arg2);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_PasswordFromBytes_Password) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_PasswordFromBytes_Password. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_PasswordFromBytes_Password. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cli_PasswordFromBytes_Password(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_PasswordFromTerm_Password) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_PasswordFromTerm_Password. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_cli_PasswordFromTerm_Password(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_util_AddUint64) {
+  GoUint64 arg1 ;
+  GoUint64 arg2 ;
+  GoUint64 *arg3 = (GoUint64 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_util_AddUint64. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_util_AddUint64(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_util_Uint64ToInt64) {
+  GoUint64 arg1 ;
+  GoInt64 *arg2 = (GoInt64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_util_Uint64ToInt64. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_util_Uint64ToInt64(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_util_Int64ToUint64) {
+  GoInt64 arg1 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoInt64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoInt64) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoInt64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_util_Int64ToUint64. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_util_Int64ToUint64(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_util_IntToUint32) {
+  GoInt arg1 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoInt) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoInt) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoInt) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_int, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_util_IntToUint32. Expected SWIGTYPE_p_unsigned_int");
+  }
+  
+  result = (GoUint32)SKY_util_IntToUint32(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_certutil_NewTLSCertPair) {
+  GoString arg1 ;
+  GoString arg2 ;
+  GoSlice arg3 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg5 = (coin__UxArray *) 0 ;
+  GoString *tmp1 ;
+  GoString *tmp2 ;
+  GoSlice *tmp3 ;
+  zval args[5];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 5 || zend_get_parameters_array_ex(5, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg3 = *tmp3;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[4], (void **) &arg5, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 5 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_certutil_NewTLSCertPair(arg1,arg2,arg3,arg4,arg5);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_Hash) {
+  coin__UxOut *arg1 = (coin__UxOut *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxOut, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxOut_Hash. Expected SWIGTYPE_p_coin__UxOut");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxOut_Hash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_coin_UxOut_Hash(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_SnapshotHash) {
+  coin__UxOut *arg1 = (coin__UxOut *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxOut, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxOut_SnapshotHash. Expected SWIGTYPE_p_coin__UxOut");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxOut_SnapshotHash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_coin_UxOut_SnapshotHash(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxBody_Hash) {
+  coin__UxBody *arg1 = (coin__UxBody *) 0 ;
+  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxBody, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxBody_Hash. Expected SWIGTYPE_p_coin__UxBody");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxBody_Hash. Expected SWIGTYPE_p_a_32__unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_coin_UxBody_Hash(arg1,(unsigned char (*)[32])arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_CoinHours) {
+  coin__UxOut *arg1 = (coin__UxOut *) 0 ;
+  GoUint64 arg2 ;
+  GoUint64 *arg3 = (GoUint64 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxOut, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxOut_CoinHours. Expected SWIGTYPE_p_coin__UxOut");
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxOut_CoinHours. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_UxOut_CoinHours(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Hashes) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Hashes. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Hashes. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Hashes(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_HasDupes) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_HasDupes. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_HasDupes. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_HasDupes(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Sort) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Sort. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Sort(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Len) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoInt *arg2 = (GoInt *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Len. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Len. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Len(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Less) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoInt arg2 ;
+  GoInt arg3 ;
+  GoUint8 *arg4 = (GoUint8 *) 0 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Less. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoInt) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoInt) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (GoInt) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (GoInt) strtoll(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (GoInt) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_coin_UxArray_Less. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Less(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Swap) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoInt arg2 ;
+  GoInt arg3 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Swap. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoInt) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoInt) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (GoInt) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (GoInt) strtoll(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (GoInt) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_coin_UxArray_Swap(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Coins) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Coins. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Coins. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Coins(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_CoinHours) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoUint64 arg2 ;
+  GoUint64 *arg3 = (GoUint64 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_CoinHours. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxArray_CoinHours. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_CoinHours(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Sub) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Sub. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Sub. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxArray_Sub. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Sub(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Add) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Add. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Add. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxArray_Add. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_UxArray_Add(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_NewAddressUxOuts) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  AddressUxOuts_Handle *arg2 = (AddressUxOuts_Handle *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_NewAddressUxOuts. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_NewAddressUxOuts. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_NewAddressUxOuts(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Keys) {
+  AddressUxOuts_Handle arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Keys. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Keys(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Flatten) {
+  AddressUxOuts_Handle arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Flatten. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Flatten(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Sub) {
+  AddressUxOuts_Handle arg1 ;
+  AddressUxOuts_Handle arg2 ;
+  AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (AddressUxOuts_Handle) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (AddressUxOuts_Handle) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Sub. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Sub(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Add) {
+  AddressUxOuts_Handle arg1 ;
+  AddressUxOuts_Handle arg2 ;
+  AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (AddressUxOuts_Handle) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (AddressUxOuts_Handle) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Add. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Add(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Get) {
+  AddressUxOuts_Handle arg1 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Get. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Get. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Get(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_HasKey) {
+  AddressUxOuts_Handle arg1 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  GoUint8 *arg3 = (GoUint8 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_HasKey. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_HasKey. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_HasKey(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_GetOutputLength) {
+  AddressUxOuts_Handle arg1 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  GoInt *arg3 = (GoInt *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_GetOutputLength. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_GetOutputLength. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_GetOutputLength(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Length) {
+  AddressUxOuts_Handle arg1 ;
+  GoInt *arg2 = (GoInt *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Length. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Length(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Set) {
+  AddressUxOuts_Handle arg1 ;
+  cipher__Address *arg2 = (cipher__Address *) 0 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Set. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Set. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_coin_AddressUxOuts_Set(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_ChooseSpendsMaximizeUxOuts) {
+  GoSlice arg1 ;
+  GoUint64 arg2 ;
+  GoUint64 arg3 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_transaction_ChooseSpendsMaximizeUxOuts. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (GoUint64) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (GoUint64) strtoull(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (GoUint64) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_transaction_ChooseSpendsMaximizeUxOuts. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_transaction_ChooseSpendsMaximizeUxOuts(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_ChooseSpendsMinimizeUxOuts) {
+  GoSlice arg1 ;
+  GoUint64 arg2 ;
+  GoUint64 arg3 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_transaction_ChooseSpendsMinimizeUxOuts. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (GoUint64) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (GoUint64) strtoull(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (GoUint64) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_transaction_ChooseSpendsMinimizeUxOuts. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_transaction_ChooseSpendsMinimizeUxOuts(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_NewUxBalance) {
+  GoUint64 arg1 ;
+  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
+  transaction__UxBalance *arg3 = (transaction__UxBalance *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_coin__UxOut, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_transaction_NewUxBalance. Expected SWIGTYPE_p_coin__UxOut");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_transaction__UxBalance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_transaction_NewUxBalance. Expected SWIGTYPE_p_transaction__UxBalance");
+  }
+  
+  result = (GoUint32)SKY_transaction_NewUxBalance(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_NewUxBalances) {
+  GoUint64 arg1 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_transaction_NewUxBalances. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_transaction_NewUxBalances. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_transaction_NewUxBalances(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_file_InitDataDir) {
+  GoString arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_InitDataDir. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_file_InitDataDir. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_file_InitDataDir(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_file_UserHome) {
+  GoString_ *arg1 = (GoString_ *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_UserHome. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_file_UserHome(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_file_ResolveResourceDirectory) {
+  GoString arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_ResolveResourceDirectory. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_file_ResolveResourceDirectory. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_file_ResolveResourceDirectory(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_file_DetermineResourcePath) {
+  GoString arg1 ;
+  GoString arg2 ;
+  GoString arg3 ;
+  GoString_ *arg4 = (GoString_ *) 0 ;
+  GoString *tmp1 ;
+  GoString *tmp2 ;
+  GoString *tmp3 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p__GoString_, 0) < 0 || tmp3 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p__GoString_");
+  }
+  arg3 = *tmp3;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_file_DetermineResourcePath(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_CreateOptionsHandle) {
+  GoString arg1 ;
+  GoString arg2 ;
+  GoString arg3 ;
+  GoUint8 arg4 ;
+  GoString arg5 ;
+  GoString arg6 ;
+  GoUint64 arg7 ;
+  Options__Handle *arg8 = (Options__Handle *) 0 ;
+  GoString *tmp1 ;
+  GoString *tmp2 ;
+  GoString *tmp3 ;
+  GoString *tmp5 ;
+  GoString *tmp6 ;
+  zval args[8];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 8 || zend_get_parameters_array_ex(8, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p__GoString_, 0) < 0 || tmp3 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
+  }
+  arg3 = *tmp3;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg4 = (GoUint8) zval_get_long(&args[3]);
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[4], (void **) &tmp5, SWIGTYPE_p__GoString_, 0) < 0 || tmp5 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 5 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
+  }
+  arg5 = *tmp5;
+  
+  
+  if (SWIG_ConvertPtr(&args[5], (void **) &tmp6, SWIGTYPE_p__GoString_, 0) < 0 || tmp6 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 6 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p__GoString_");
+  }
+  arg6 = *tmp6;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[6])) {
+  case IS_DOUBLE:
+    arg7 = (GoUint64) Z_DVAL(args[6]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg7 = (GoUint64) strtoull(Z_STRVAL(args[6]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg7 = (GoUint64) zval_get_long(&args[6]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[7], (void **) &arg8, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 8 of SKY_wallet_CreateOptionsHandle. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_wallet_CreateOptionsHandle(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewBalance) {
+  GoUint64 arg1 ;
+  GoUint64 arg2 ;
+  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_NewBalance. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  result = (GoUint32)SKY_wallet_NewBalance(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewBalanceFromUxOut) {
+  GoUint64 arg1 ;
+  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
+  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_coin__UxOut, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_NewBalanceFromUxOut. Expected SWIGTYPE_p_coin__UxOut");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_NewBalanceFromUxOut. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  result = (GoUint32)SKY_wallet_NewBalanceFromUxOut(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_Add) {
+  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
+  wallet__Balance *arg2 = (wallet__Balance *) 0 ;
+  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_Add. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_Add. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_Balance_Add. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  result = (GoUint32)SKY_wallet_Balance_Add(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_Sub) {
+  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
+  wallet__Balance *arg2 = (wallet__Balance *) 0 ;
+  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_Sub. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_Sub. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_Balance_Sub. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  result = (GoUint32)SKY_wallet_Balance_Sub(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_Equals) {
+  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
+  wallet__Balance *arg2 = (wallet__Balance *) 0 ;
+  GoUint8 *arg3 = (GoUint8 *) 0 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_Equals. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_Equals. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_Balance_Equals. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_wallet_Balance_Equals(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Balance_IsZero) {
+  wallet__Balance *arg1 = (wallet__Balance *) 0 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Balance, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Balance_IsZero. Expected SWIGTYPE_p_wallet__Balance");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_Balance_IsZero. Expected SWIGTYPE_p_unsigned_char");
+  }
+  
+  result = (GoUint32)SKY_wallet_Balance_IsZero(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
 ZEND_NAMED_FUNCTION(_wrap_SKY_logging_EnableColors) {
   GoUint32 result;
   
@@ -17423,227 +18634,6 @@ ZEND_NAMED_FUNCTION(_wrap_SKY_logging_Disable) {
   }
   
   result = (GoUint32)SKY_logging_Disable();
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreateTransactionResponse) {
-  Transaction__Handle arg1 ;
-  GoSlice arg2 ;
-  CreateTransactionResponse__Handle *arg3 = (CreateTransactionResponse__Handle *) 0 ;
-  GoSlice *tmp2 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreateTransactionResponse. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_NewCreateTransactionResponse. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_NewCreateTransactionResponse(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreatedTransaction) {
-  Transaction__Handle arg1 ;
-  GoSlice arg2 ;
-  CreatedTransaction__Handle *arg3 = (CreatedTransaction__Handle *) 0 ;
-  GoSlice *tmp2 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreatedTransaction. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_NewCreatedTransaction. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_NewCreatedTransaction(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_CreatedTransaction_ToTransaction) {
-  CreatedTransaction__Handle arg1 ;
-  Transaction__Handle *arg2 = (Transaction__Handle *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (CreatedTransaction__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (CreatedTransaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (CreatedTransaction__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_CreatedTransaction_ToTransaction. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_CreatedTransaction_ToTransaction(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreatedTransactionOutput) {
-  coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  CreatedTransactionOutput__Handle *arg3 = (CreatedTransactionOutput__Handle *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__TransactionOutput, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_api_NewCreatedTransactionOutput. Expected SWIGTYPE_p_coin__TransactionOutput");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreatedTransactionOutput. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_api_NewCreatedTransactionOutput. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_NewCreatedTransactionOutput(arg1,(unsigned char (*)[32])arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewCreatedTransactionInput) {
-  api__TransactionInput *arg1 = (api__TransactionInput *) 0 ;
-  CreatedTransactionInput__Handle *arg2 = (CreatedTransactionInput__Handle *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_api__TransactionInput, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_api_NewCreatedTransactionInput. Expected SWIGTYPE_p_api__TransactionInput");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewCreatedTransactionInput. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_api_NewCreatedTransactionInput(arg1,arg2);
   
   RETVAL_LONG(result);
   
@@ -19250,6 +20240,558 @@ fail:
 }
 
 
+ZEND_NAMED_FUNCTION(_wrap_SKY_params_GetDistributionAddresses) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  zval args[1];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_params_GetDistributionAddresses. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  SKY_params_GetDistributionAddresses(arg1);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_params_GetUnlockedDistributionAddresses) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  zval args[1];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_params_GetUnlockedDistributionAddresses. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  SKY_params_GetUnlockedDistributionAddresses(arg1);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_params_GetLockedDistributionAddresses) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  zval args[1];
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_params_GetLockedDistributionAddresses. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  SKY_params_GetLockedDistributionAddresses(arg1);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_api_NewWalletResponse) {
+  Wallet__Handle arg1 ;
+  WalletResponse__Handle *arg2 = (WalletResponse__Handle *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_api_NewWalletResponse. Expected SWIGTYPE_p_long_long");
+  }
+  
+  result = (GoUint32)SKY_api_NewWalletResponse(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_encrypt_ScryptChacha20poly1305_Encrypt) {
+  encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
+  GoSlice arg2 ;
+  GoSlice arg3 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  GoSlice *tmp2 ;
+  GoSlice *tmp3 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_encrypt__ScryptChacha20poly1305, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_encrypt__ScryptChacha20poly1305");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg3 = *tmp3;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_encrypt_ScryptChacha20poly1305_Encrypt. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_encrypt_ScryptChacha20poly1305_Encrypt(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_encrypt_ScryptChacha20poly1305_Decrypt) {
+  encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
+  GoSlice arg2 ;
+  GoSlice arg3 ;
+  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
+  GoSlice *tmp2 ;
+  GoSlice *tmp3 ;
+  zval args[4];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_encrypt__ScryptChacha20poly1305, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_encrypt__ScryptChacha20poly1305");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p_GoSlice, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg2 = *tmp2;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg3 = *tmp3;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_encrypt_ScryptChacha20poly1305_Decrypt. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_encrypt_ScryptChacha20poly1305_Decrypt(arg1,arg2,arg3,arg4);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_DistributeCoinHoursProportional) {
+  GoSlice arg1 ;
+  GoUint64 arg2 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  GoSlice *tmp1 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_transaction_DistributeCoinHoursProportional. Expected SWIGTYPE_p_GoSlice");
+  }
+  arg1 = *tmp1;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_transaction_DistributeCoinHoursProportional. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  result = (GoUint32)SKY_transaction_DistributeCoinHoursProportional(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_transaction_DistributeSpendHours) {
+  GoUint64 arg1 ;
+  GoUint64 arg2 ;
+  GoUint8 arg3 ;
+  GoUint64 *arg4 = (GoUint64 *) 0 ;
+  coin__UxArray *arg5 = (coin__UxArray *) 0 ;
+  GoUint64 *arg6 = (GoUint64 *) 0 ;
+  zval args[6];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 6 || zend_get_parameters_array_ex(6, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
+  }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg3 = (GoUint8) zval_get_long(&args[2]);
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_transaction_DistributeSpendHours. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[4], (void **) &arg5, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 5 of SKY_transaction_DistributeSpendHours. Expected SWIGTYPE_p_GoSlice_");
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[5], (void **) &arg6, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 6 of SKY_transaction_DistributeSpendHours. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_transaction_DistributeSpendHours(arg1,arg2,arg3,arg4,arg5,arg6);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_droplet_FromString) {
+  GoString arg1 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  GoString *tmp1 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_droplet_FromString. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_droplet_FromString. Expected SWIGTYPE_p_unsigned_long_long");
+  }
+  
+  result = (GoUint32)SKY_droplet_FromString(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_droplet_ToString) {
+  GoUint64 arg1 ;
+  GoString_ *arg2 = (GoString_ *) 0 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (GoUint64) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (GoUint64) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_droplet_ToString. Expected SWIGTYPE_p_GoString_");
+  }
+  
+  result = (GoUint32)SKY_droplet_ToString(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_testutil_MakeAddress) {
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  zval args[1];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_cipher__Address, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_testutil_MakeAddress. Expected SWIGTYPE_p_cipher__Address");
+  }
+  
+  result = (GoUint32)SKY_testutil_MakeAddress(arg1);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_AddPrivateKey) {
+  Wallet__Handle arg1 ;
+  GoString arg2 ;
+  GoString *tmp2 ;
+  zval args[2];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Wallet__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Wallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Wallet__Handle) zval_get_long(&args[0]);
+  }
+  /*@SWIG@*/;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_AddPrivateKey. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  result = (GoUint32)SKY_cli_AddPrivateKey(arg1,arg2);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
+ZEND_NAMED_FUNCTION(_wrap_SKY_cli_AddPrivateKeyToFile) {
+  GoString arg1 ;
+  GoString arg2 ;
+  PasswordReader__Handle arg3 ;
+  GoString *tmp1 ;
+  GoString *tmp2 ;
+  zval args[3];
+  GoUint32 result;
+  
+  SWIG_ResetError();
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
+    WRONG_PARAM_COUNT;
+  }
+  
+  
+  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_AddPrivateKeyToFile. Expected SWIGTYPE_p__GoString_");
+  }
+  arg1 = *tmp1;
+  
+  
+  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_AddPrivateKeyToFile. Expected SWIGTYPE_p__GoString_");
+  }
+  arg2 = *tmp2;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[2])) {
+  case IS_DOUBLE:
+    arg3 = (PasswordReader__Handle) Z_DVAL(args[2]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg3 = (PasswordReader__Handle) strtoll(Z_STRVAL(args[2]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg3 = (PasswordReader__Handle) zval_get_long(&args[2]);
+  }
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_cli_AddPrivateKeyToFile(arg1,arg2,arg3);
+  
+  RETVAL_LONG(result);
+  
+thrown:
+  return;
+fail:
+  SWIG_FAIL();
+}
+
+
 ZEND_NAMED_FUNCTION(_wrap_SKY_httphelper_Address_UnmarshalJSON) {
   httphelper__Address *arg1 = (httphelper__Address *) 0 ;
   GoSlice arg2 ;
@@ -19512,30 +21054,60 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_droplet_FromString) {
-  GoString arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
+ZEND_NAMED_FUNCTION(_wrap_SKY_fee_VerifyTransactionFee) {
+  Transaction__Handle arg1 ;
+  GoUint64 arg2 ;
+  GoUint32 arg3 ;
+  zval args[3];
   GoUint32 result;
   
   SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
     WRONG_PARAM_COUNT;
   }
   
   
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_droplet_FromString. Expected SWIGTYPE_p__GoString_");
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
   }
-  arg1 = *tmp1;
+  /*@SWIG@*/;
   
   
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_droplet_FromString. Expected SWIGTYPE_p_unsigned_long_long");
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
   }
+  /*@SWIG@*/;
   
-  result = (GoUint32)SKY_droplet_FromString(arg1,arg2);
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg3 = (GoUint32) zval_get_long(&args[2]);
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_fee_VerifyTransactionFee(arg1,arg2,arg3);
   
   RETVAL_LONG(result);
   
@@ -19546,14 +21118,15 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_droplet_ToString) {
+ZEND_NAMED_FUNCTION(_wrap_SKY_fee_VerifyTransactionFeeForHours) {
   GoUint64 arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  zval args[2];
+  GoUint64 arg2 ;
+  GoUint32 arg3 ;
+  zval args[3];
   GoUint32 result;
   
   SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
+  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
     WRONG_PARAM_COUNT;
   }
   
@@ -19576,11 +21149,29 @@ ZEND_NAMED_FUNCTION(_wrap_SKY_droplet_ToString) {
   /*@SWIG@*/;
   
   
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_droplet_ToString. Expected SWIGTYPE_p_GoString_");
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[1])) {
+  case IS_DOUBLE:
+    arg2 = (GoUint64) Z_DVAL(args[1]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg2 = (GoUint64) zval_get_long(&args[1]);
   }
+  /*@SWIG@*/;
   
-  result = (GoUint32)SKY_droplet_ToString(arg1,arg2);
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg3 = (GoUint32) zval_get_long(&args[2]);
+  /*@SWIG@*/;
+  
+  result = (GoUint32)SKY_fee_VerifyTransactionFeeForHours(arg1,arg2,arg3);
   
   RETVAL_LONG(result);
   
@@ -19591,105 +21182,9 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_Hash) {
-  coin__UxOut *arg1 = (coin__UxOut *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxOut, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxOut_Hash. Expected SWIGTYPE_p_coin__UxOut");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxOut_Hash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_coin_UxOut_Hash(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_SnapshotHash) {
-  coin__UxOut *arg1 = (coin__UxOut *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxOut, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxOut_SnapshotHash. Expected SWIGTYPE_p_coin__UxOut");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxOut_SnapshotHash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_coin_UxOut_SnapshotHash(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxBody_Hash) {
-  coin__UxBody *arg1 = (coin__UxBody *) 0 ;
-  cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxBody, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxBody_Hash. Expected SWIGTYPE_p_coin__UxBody");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_a_32__unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxBody_Hash. Expected SWIGTYPE_p_a_32__unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_coin_UxBody_Hash(arg1,(unsigned char (*)[32])arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_CoinHours) {
-  coin__UxOut *arg1 = (coin__UxOut *) 0 ;
-  GoUint64 arg2 ;
+ZEND_NAMED_FUNCTION(_wrap_SKY_fee_RequiredFee) {
+  GoUint64 arg1 ;
+  GoUint32 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
   zval args[3];
   GoUint32 result;
@@ -19700,34 +21195,34 @@ ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxOut_CoinHours) {
   }
   
   
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_coin__UxOut, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxOut_CoinHours. Expected SWIGTYPE_p_coin__UxOut");
-  }
-  
-  
   /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
+  switch (Z_TYPE(args[0])) {
   case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
+    arg1 = (GoUint64) Z_DVAL(args[0]);
     break;
     case IS_STRING: {
       char * endptr;
       errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
       if (*endptr && !errno) break;
       /* FALL THRU */
     }
   default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
+    arg1 = (GoUint64) zval_get_long(&args[0]);
   }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (GoUint32) zval_get_long(&args[1]);
   /*@SWIG@*/;
   
   
   if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxOut_CoinHours. Expected SWIGTYPE_p_unsigned_long_long");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_fee_RequiredFee. Expected SWIGTYPE_p_unsigned_long_long");
   }
   
-  result = (GoUint32)SKY_coin_UxOut_CoinHours(arg1,arg2,arg3);
+  result = (GoUint32)SKY_fee_RequiredFee(arg1,arg2,arg3);
   
   RETVAL_LONG(result);
   
@@ -19738,297 +21233,9 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Hashes) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Hashes. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Hashes. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Hashes(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_HasDupes) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_HasDupes. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_HasDupes. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_HasDupes(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Sort) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Sort. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Sort(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Len) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Len. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Len. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Len(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Less) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoInt arg2 ;
-  GoInt arg3 ;
-  GoUint8 *arg4 = (GoUint8 *) 0 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Less. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoInt) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoInt) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (GoInt) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (GoInt) strtoll(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (GoInt) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_coin_UxArray_Less. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Less(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Swap) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoInt arg2 ;
-  GoInt arg3 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Swap. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (GoInt) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (GoInt) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (GoInt) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (GoInt) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (GoInt) strtoll(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (GoInt) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_coin_UxArray_Swap(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Coins) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Coins. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Coins. Expected SWIGTYPE_p_unsigned_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Coins(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_CoinHours) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoUint64 arg2 ;
+ZEND_NAMED_FUNCTION(_wrap_SKY_fee_RemainingHours) {
+  GoUint64 arg1 ;
+  GoUint32 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
   zval args[3];
   GoUint32 result;
@@ -20039,72 +21246,34 @@ ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_CoinHours) {
   }
   
   
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_CoinHours. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
   /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
+  switch (Z_TYPE(args[0])) {
   case IS_DOUBLE:
-    arg2 = (GoUint64) Z_DVAL(args[1]);
+    arg1 = (GoUint64) Z_DVAL(args[0]);
     break;
     case IS_STRING: {
       char * endptr;
       errno = 0;
-      arg2 = (GoUint64) strtoull(Z_STRVAL(args[1]), &endptr, 10);
+      arg1 = (GoUint64) strtoull(Z_STRVAL(args[0]), &endptr, 10);
       if (*endptr && !errno) break;
       /* FALL THRU */
     }
   default:
-    arg2 = (GoUint64) zval_get_long(&args[1]);
+    arg1 = (GoUint64) zval_get_long(&args[0]);
   }
+  /*@SWIG@*/;
+  
+  
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,6,CONVERT_INT_IN@*/
+  arg2 = (GoUint32) zval_get_long(&args[1]);
   /*@SWIG@*/;
   
   
   if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxArray_CoinHours. Expected SWIGTYPE_p_unsigned_long_long");
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_fee_RemainingHours. Expected SWIGTYPE_p_unsigned_long_long");
   }
   
-  result = (GoUint32)SKY_coin_UxArray_CoinHours(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Sub) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Sub. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Sub. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxArray_Sub. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Sub(arg1,arg2,arg3);
+  result = (GoUint32)SKY_fee_RemainingHours(arg1,arg2,arg3);
   
   RETVAL_LONG(result);
   
@@ -20115,814 +21284,11 @@ fail:
 }
 
 
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_UxArray_Add) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_UxArray_Add. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_UxArray_Add. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_UxArray_Add. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_UxArray_Add(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_NewAddressUxOuts) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  AddressUxOuts_Handle *arg2 = (AddressUxOuts_Handle *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_coin_NewAddressUxOuts. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_NewAddressUxOuts. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_NewAddressUxOuts(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Keys) {
-  AddressUxOuts_Handle arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Keys. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Keys(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Flatten) {
-  AddressUxOuts_Handle arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Flatten. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Flatten(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Sub) {
-  AddressUxOuts_Handle arg1 ;
-  AddressUxOuts_Handle arg2 ;
-  AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (AddressUxOuts_Handle) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (AddressUxOuts_Handle) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Sub. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Sub(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Add) {
-  AddressUxOuts_Handle arg1 ;
-  AddressUxOuts_Handle arg2 ;
-  AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[1])) {
-  case IS_DOUBLE:
-    arg2 = (AddressUxOuts_Handle) Z_DVAL(args[1]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg2 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[1]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg2 = (AddressUxOuts_Handle) zval_get_long(&args[1]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Add. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Add(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Get) {
-  AddressUxOuts_Handle arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Get. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Get. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Get(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_HasKey) {
-  AddressUxOuts_Handle arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  GoUint8 *arg3 = (GoUint8 *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_HasKey. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_unsigned_char, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_HasKey. Expected SWIGTYPE_p_unsigned_char");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_HasKey(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_GetOutputLength) {
-  AddressUxOuts_Handle arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  GoInt *arg3 = (GoInt *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_GetOutputLength. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_GetOutputLength. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_GetOutputLength(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Length) {
-  AddressUxOuts_Handle arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Length. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Length(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_coin_AddressUxOuts_Set) {
-  AddressUxOuts_Handle arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (AddressUxOuts_Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (AddressUxOuts_Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (AddressUxOuts_Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_cipher__Address, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_coin_AddressUxOuts_Set. Expected SWIGTYPE_p_cipher__Address");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_coin_AddressUxOuts_Set. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_coin_AddressUxOuts_Set(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_file_InitDataDir) {
-  GoString arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_InitDataDir. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_file_InitDataDir. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_file_InitDataDir(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_file_UserHome) {
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_UserHome. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_file_UserHome(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_file_ResolveResourceDirectory) {
-  GoString arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_ResolveResourceDirectory. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_file_ResolveResourceDirectory. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_file_ResolveResourceDirectory(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_file_DetermineResourcePath) {
-  GoString arg1 ;
-  GoString arg2 ;
-  GoString arg3 ;
-  GoString_ *arg4 = (GoString_ *) 0 ;
-  GoString *tmp1 ;
-  GoString *tmp2 ;
-  GoString *tmp3 ;
-  zval args[4];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 4 || zend_get_parameters_array_ex(4, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p__GoString_, 0) < 0 || tmp3 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p__GoString_");
-  }
-  arg3 = *tmp3;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_file_DetermineResourcePath. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_file_DetermineResourcePath(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_params_GetDistributionAddresses) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  zval args[1];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_params_GetDistributionAddresses. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  SKY_params_GetDistributionAddresses(arg1);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_params_GetUnlockedDistributionAddresses) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  zval args[1];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_params_GetUnlockedDistributionAddresses. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  SKY_params_GetUnlockedDistributionAddresses(arg1);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_params_GetLockedDistributionAddresses) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  zval args[1];
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_params_GetLockedDistributionAddresses. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  SKY_params_GetLockedDistributionAddresses(arg1);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Entry_Verify) {
-  wallet__Entry *arg1 = (wallet__Entry *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Entry, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Entry_Verify. Expected SWIGTYPE_p_wallet__Entry");
-  }
-  
-  result = (GoUint32)SKY_wallet_Entry_Verify(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_Entry_VerifyPublic) {
-  wallet__Entry *arg1 = (wallet__Entry *) 0 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &arg1, SWIGTYPE_p_wallet__Entry, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_Entry_VerifyPublic. Expected SWIGTYPE_p_wallet__Entry");
-  }
-  
-  result = (GoUint32)SKY_wallet_Entry_VerifyPublic(arg1);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_GenerateAddressesInFile) {
-  GoString arg1 ;
+ZEND_NAMED_FUNCTION(_wrap_SKY_fee_TransactionFee) {
+  Transaction__Handle arg1 ;
   GoUint64 arg2 ;
-  PasswordReader__Handle arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoString *tmp1 ;
+  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
+  GoUint64 *arg4 = (GoUint64 *) 0 ;
   zval args[4];
   GoUint32 result;
   
@@ -20932,10 +21298,22 @@ ZEND_NAMED_FUNCTION(_wrap_SKY_cli_GenerateAddressesInFile) {
   }
   
   
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_GenerateAddressesInFile. Expected SWIGTYPE_p__GoString_");
+  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
+  switch (Z_TYPE(args[0])) {
+  case IS_DOUBLE:
+    arg1 = (Transaction__Handle) Z_DVAL(args[0]);
+    break;
+    case IS_STRING: {
+      char * endptr;
+      errno = 0;
+      arg1 = (Transaction__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
+      if (*endptr && !errno) break;
+      /* FALL THRU */
+    }
+  default:
+    arg1 = (Transaction__Handle) zval_get_long(&args[0]);
   }
-  arg1 = *tmp1;
+  /*@SWIG@*/;
   
   
   /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,27,CONVERT_UNSIGNED_LONG_LONG_IN@*/
@@ -20956,394 +21334,16 @@ ZEND_NAMED_FUNCTION(_wrap_SKY_cli_GenerateAddressesInFile) {
   /*@SWIG@*/;
   
   
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[2])) {
-  case IS_DOUBLE:
-    arg3 = (PasswordReader__Handle) Z_DVAL(args[2]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg3 = (PasswordReader__Handle) strtoll(Z_STRVAL(args[2]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg3 = (PasswordReader__Handle) zval_get_long(&args[2]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_cli_GenerateAddressesInFile. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cli_GenerateAddressesInFile(arg1,arg2,arg3,arg4);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_FormatAddressesAsJSON) {
-  GoSlice arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
+  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_GoSlice_, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_fee_TransactionFee. Expected SWIGTYPE_p_GoSlice_");
   }
   
   
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_FormatAddressesAsJSON. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_FormatAddressesAsJSON. Expected SWIGTYPE_p_GoString_");
+  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_unsigned_long_long, 0) < 0) {
+    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_fee_TransactionFee. Expected SWIGTYPE_p_unsigned_long_long");
   }
   
-  result = (GoUint32)SKY_cli_FormatAddressesAsJSON(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_FormatAddressesAsJoinedArray) {
-  GoSlice arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_FormatAddressesAsJoinedArray. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoString_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_FormatAddressesAsJoinedArray. Expected SWIGTYPE_p_GoString_");
-  }
-  
-  result = (GoUint32)SKY_cli_FormatAddressesAsJoinedArray(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_cli_AddressesToStrings) {
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p_GoSlice, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_cli_AddressesToStrings. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_cli_AddressesToStrings. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_cli_AddressesToStrings(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_certutil_NewTLSCertPair) {
-  GoString arg1 ;
-  GoString arg2 ;
-  GoSlice arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg5 = (coin__UxArray *) 0 ;
-  GoString *tmp1 ;
-  GoString *tmp2 ;
-  GoSlice *tmp3 ;
-  zval args[5];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 5 || zend_get_parameters_array_ex(5, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &tmp3, SWIGTYPE_p_GoSlice, 0) < 0 || tmp3 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p_GoSlice");
-  }
-  arg3 = *tmp3;
-  
-  
-  if (SWIG_ConvertPtr(&args[3], (void **) &arg4, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 4 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[4], (void **) &arg5, SWIGTYPE_p_GoSlice_, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 5 of SKY_certutil_NewTLSCertPair. Expected SWIGTYPE_p_GoSlice_");
-  }
-  
-  result = (GoUint32)SKY_certutil_NewTLSCertPair(arg1,arg2,arg3,arg4,arg5);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_NewReadableEntry) {
-  GoString arg1 ;
-  wallet__Entry *arg2 = (wallet__Entry *) 0 ;
-  ReadableEntry__Handle *arg3 = (ReadableEntry__Handle *) 0 ;
-  GoString *tmp1 ;
-  zval args[3];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 3 || zend_get_parameters_array_ex(3, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_NewReadableEntry. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_wallet__Entry, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_NewReadableEntry. Expected SWIGTYPE_p_wallet__Entry");
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[2], (void **) &arg3, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 3 of SKY_wallet_NewReadableEntry. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_wallet_NewReadableEntry(arg1,arg2,arg3);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_LoadReadableWallet) {
-  GoString arg1 ;
-  ReadableWallet__Handle *arg2 = (ReadableWallet__Handle *) 0 ;
-  GoString *tmp1 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  if (SWIG_ConvertPtr(&args[0], (void **) &tmp1, SWIGTYPE_p__GoString_, 0) < 0 || tmp1 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 1 of SKY_wallet_LoadReadableWallet. Expected SWIGTYPE_p__GoString_");
-  }
-  arg1 = *tmp1;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &arg2, SWIGTYPE_p_long_long, 0) < 0) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_LoadReadableWallet. Expected SWIGTYPE_p_long_long");
-  }
-  
-  result = (GoUint32)SKY_wallet_LoadReadableWallet(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_ReadableWallet_Save) {
-  ReadableWallet__Handle arg1 ;
-  GoString arg2 ;
-  GoString *tmp2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (ReadableWallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (ReadableWallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (ReadableWallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_ReadableWallet_Save. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint32)SKY_wallet_ReadableWallet_Save(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_ReadableWallet_Load) {
-  ReadableWallet__Handle arg1 ;
-  GoString arg2 ;
-  GoString *tmp2 ;
-  zval args[2];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 2 || zend_get_parameters_array_ex(2, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (ReadableWallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (ReadableWallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (ReadableWallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  
-  if (SWIG_ConvertPtr(&args[1], (void **) &tmp2, SWIGTYPE_p__GoString_, 0) < 0 || tmp2 == NULL) {
-    SWIG_PHP_Error(E_ERROR, "Type error in argument 2 of SKY_wallet_ReadableWallet_Load. Expected SWIGTYPE_p__GoString_");
-  }
-  arg2 = *tmp2;
-  
-  result = (GoUint32)SKY_wallet_ReadableWallet_Load(arg1,arg2);
-  
-  RETVAL_LONG(result);
-  
-thrown:
-  return;
-fail:
-  SWIG_FAIL();
-}
-
-
-ZEND_NAMED_FUNCTION(_wrap_SKY_wallet_ReadableWallet_Erase) {
-  ReadableWallet__Handle arg1 ;
-  zval args[1];
-  GoUint32 result;
-  
-  SWIG_ResetError();
-  if(ZEND_NUM_ARGS() != 1 || zend_get_parameters_array_ex(1, args) != SUCCESS) {
-    WRONG_PARAM_COUNT;
-  }
-  
-  
-  /*@SWIG:/usr/share/swig/3.0.12/php/utils.i,10,CONVERT_LONG_LONG_IN@*/
-  switch (Z_TYPE(args[0])) {
-  case IS_DOUBLE:
-    arg1 = (ReadableWallet__Handle) Z_DVAL(args[0]);
-    break;
-    case IS_STRING: {
-      char * endptr;
-      errno = 0;
-      arg1 = (ReadableWallet__Handle) strtoll(Z_STRVAL(args[0]), &endptr, 10);
-      if (*endptr && !errno) break;
-      /* FALL THRU */
-    }
-  default:
-    arg1 = (ReadableWallet__Handle) zval_get_long(&args[0]);
-  }
-  /*@SWIG@*/;
-  
-  result = (GoUint32)SKY_wallet_ReadableWallet_Erase(arg1);
+  result = (GoUint32)SKY_fee_TransactionFee(arg1,arg2,arg3,arg4);
   
   RETVAL_LONG(result);
   
@@ -29035,15 +29035,15 @@ ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_0000, 0, 0, 0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
 ZEND_END_ARG_INFO()
-ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_000000, 0, 0, 0)
- ZEND_ARG_PASS_INFO(0)
+ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_00000, 0, 0, 0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
 ZEND_END_ARG_INFO()
-ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_00000, 0, 0, 0)
+ZEND_BEGIN_ARG_INFO_EX(swig_arginfo_000000, 0, 0, 0)
+ ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
  ZEND_ARG_PASS_INFO(0)
@@ -29181,6 +29181,19 @@ static zend_function_entry skycoin_functions[] = {
  SWIG_ZEND_NAMED_FE(goslice_cap_set,_wrap_GoSlice_cap_set,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(goslice_cap_get,_wrap_GoSlice_cap_get,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(new_goslice,_wrap_new_GoSlice,swig_arginfo_)
+ SWIG_ZEND_NAMED_FE(sky_iputil_localhostip,_wrap_SKY_iputil_LocalhostIP,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_iputil_islocalhost,_wrap_SKY_iputil_IsLocalhost,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_iputil_splitaddr,_wrap_SKY_iputil_SplitAddr,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_newcreatetransactionresponse,_wrap_SKY_api_NewCreateTransactionResponse,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_newcreatedtransaction,_wrap_SKY_api_NewCreatedTransaction,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_createdtransaction_totransaction,_wrap_SKY_api_CreatedTransaction_ToTransaction,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_newcreatedtransactionoutput,_wrap_SKY_api_NewCreatedTransactionOutput,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_newcreatedtransactioninput,_wrap_SKY_api_NewCreatedTransactionInput,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_wallet_newreadableentry,_wrap_SKY_wallet_NewReadableEntry,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_loadreadablewallet,_wrap_SKY_wallet_LoadReadableWallet,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_wallet_readablewallet_save,_wrap_SKY_wallet_ReadableWallet_Save,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_wallet_readablewallet_load,_wrap_SKY_wallet_ReadableWallet_Load,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_wallet_readablewallet_erase,_wrap_SKY_wallet_ReadableWallet_Erase,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(sky_coin_create_transaction,_wrap_SKY_coin_Create_Transaction,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(sky_coin_transaction_copy,_wrap_SKY_coin_Transaction_Copy,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_coin_gettransactionobject,_wrap_SKY_coin_GetTransactionObject,swig_arginfo_00)
@@ -29228,114 +29241,15 @@ static zend_function_entry skycoin_functions[] = {
  SWIG_ZEND_NAMED_FE(sky_coin_verifytransactioncoinsspending,_wrap_SKY_coin_VerifyTransactionCoinsSpending,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_coin_verifytransactionhoursspending,_wrap_SKY_coin_VerifyTransactionHoursSpending,swig_arginfo_000)
  SWIG_ZEND_NAMED_FE(sky_coin_verifyinputsignatures,_wrap_SKY_coin_VerifyInputSignatures,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_secp256k1_pubkeyfromseckey,_wrap_SKY_secp256k1_PubkeyFromSeckey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_secp256k1_verifypubkey,_wrap_SKY_secp256k1_VerifyPubkey,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_secp256k1_verifyseckey,_wrap_SKY_secp256k1_VerifySecKey,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_secp256k1_ecdh,_wrap_SKY_secp256k1_ECDH,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cli_loadconfig,_wrap_SKY_cli_LoadConfig,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cli_config_fullwalletpath,_wrap_SKY_cli_Config_FullWalletPath,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_config_fulldbpath,_wrap_SKY_cli_Config_FullDBPath,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_newcli,_wrap_SKY_cli_NewCLI,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_newpasswordreader,_wrap_SKY_cli_NewPasswordReader,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_passwordfrombytes_password,_wrap_SKY_cli_PasswordFromBytes_Password,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_passwordfromterm_password,_wrap_SKY_cli_PasswordFromTerm_Password,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_jsonencode_handle,_wrap_SKY_JsonEncode_Handle,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_progress_getcurrent,_wrap_SKY_Handle_Progress_GetCurrent,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_block_getheadseq,_wrap_SKY_Handle_Block_GetHeadSeq,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_block_getheadhash,_wrap_SKY_Handle_Block_GetHeadHash,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_block_getpreviousblockhash,_wrap_SKY_Handle_Block_GetPreviousBlockHash,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_blocks_getat,_wrap_SKY_Handle_Blocks_GetAt,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_handle_blocks_getcount,_wrap_SKY_Handle_Blocks_GetCount,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_connections_getcount,_wrap_SKY_Handle_Connections_GetCount,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_strings_getcount,_wrap_SKY_Handle_Strings_GetCount,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_strings_sort,_wrap_SKY_Handle_Strings_Sort,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_handle_strings_getat,_wrap_SKY_Handle_Strings_GetAt,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletdir,_wrap_SKY_api_Handle_Client_GetWalletDir,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletfilename,_wrap_SKY_api_Handle_Client_GetWalletFileName,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletlabel,_wrap_SKY_api_Handle_Client_GetWalletLabel,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletfullpath,_wrap_SKY_api_Handle_Client_GetWalletFullPath,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletmeta,_wrap_SKY_api_Handle_GetWalletMeta,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletentriescount,_wrap_SKY_api_Handle_GetWalletEntriesCount,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletresponseentriescount,_wrap_SKY_api_Handle_Client_GetWalletResponseEntriesCount,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_walletgetentry,_wrap_SKY_api_Handle_WalletGetEntry,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_api_handle_walletresponsegetentry,_wrap_SKY_api_Handle_WalletResponseGetEntry,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_api_handle_walletresponseisencrypted,_wrap_SKY_api_Handle_WalletResponseIsEncrypted,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_walletresponsegetcryptotype,_wrap_SKY_api_Handle_WalletResponseGetCryptoType,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_walletsresponsegetcount,_wrap_SKY_api_Handle_WalletsResponseGetCount,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_walletsresponsegetat,_wrap_SKY_api_Handle_WalletsResponseGetAt,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletfolderaddress,_wrap_SKY_api_Handle_GetWalletFolderAddress,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletseed,_wrap_SKY_api_Handle_GetWalletSeed,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletlastseed,_wrap_SKY_api_Handle_GetWalletLastSeed,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_handle_getbuildinfodata,_wrap_SKY_api_Handle_GetBuildInfoData,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_wallet_cryptotypefromstring,_wrap_SKY_wallet_CryptoTypeFromString,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_apputil_catchinterruptpanic,_wrap_SKY_apputil_CatchInterruptPanic,swig_arginfo_)
- SWIG_ZEND_NAMED_FE(sky_apputil_catchdebug,_wrap_SKY_apputil_CatchDebug,swig_arginfo_)
- SWIG_ZEND_NAMED_FE(sky_apputil_printprogramstatus,_wrap_SKY_apputil_PrintProgramStatus,swig_arginfo_)
- SWIG_ZEND_NAMED_FE(sky_map_get,_wrap_SKY_map_Get,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_map_haskey,_wrap_SKY_map_HasKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_map_close,_wrap_SKY_map_Close,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_fee_verifytransactionfee,_wrap_SKY_fee_VerifyTransactionFee,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_fee_verifytransactionfeeforhours,_wrap_SKY_fee_VerifyTransactionFeeForHours,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_fee_requiredfee,_wrap_SKY_fee_RequiredFee,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_fee_remaininghours,_wrap_SKY_fee_RemainingHours,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_fee_transactionfee,_wrap_SKY_fee_TransactionFee,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_cipher_ripemd160_set,_wrap_SKY_cipher_Ripemd160_Set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_hashripemd160,_wrap_SKY_cipher_HashRipemd160,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sha256_set,_wrap_SKY_cipher_SHA256_Set,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sha256_hex,_wrap_SKY_cipher_SHA256_Hex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sha256_xor,_wrap_SKY_cipher_SHA256_Xor,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_sumsha256,_wrap_SKY_cipher_SumSHA256,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sha256fromhex,_wrap_SKY_cipher_SHA256FromHex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_doublesha256,_wrap_SKY_cipher_DoubleSHA256,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_addsha256,_wrap_SKY_cipher_AddSHA256,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_merkle,_wrap_SKY_cipher_Merkle,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sha256_null,_wrap_SKY_cipher_SHA256_Null,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_randbyte,_wrap_SKY_cipher_RandByte,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_newpubkey,_wrap_SKY_cipher_NewPubKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyfromhex,_wrap_SKY_cipher_PubKeyFromHex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyfromseckey,_wrap_SKY_cipher_PubKeyFromSecKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyfromsig,_wrap_SKY_cipher_PubKeyFromSig,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_pubkey_verify,_wrap_SKY_cipher_PubKey_Verify,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cipher_pubkey_hex,_wrap_SKY_cipher_PubKey_Hex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyripemd160,_wrap_SKY_cipher_PubKeyRipemd160,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_newseckey,_wrap_SKY_cipher_NewSecKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_seckeyfromhex,_wrap_SKY_cipher_SecKeyFromHex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_seckey_verify,_wrap_SKY_cipher_SecKey_Verify,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cipher_seckey_hex,_wrap_SKY_cipher_SecKey_Hex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_ecdh,_wrap_SKY_cipher_ECDH,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_newsig,_wrap_SKY_cipher_NewSig,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sigfromhex,_wrap_SKY_cipher_SigFromHex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_sig_hex,_wrap_SKY_cipher_Sig_Hex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_signhash,_wrap_SKY_cipher_SignHash,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_verifyaddresssignedhash,_wrap_SKY_cipher_VerifyAddressSignedHash,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_verifypubkeysignedhash,_wrap_SKY_cipher_VerifyPubKeySignedHash,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_generatekeypair,_wrap_SKY_cipher_GenerateKeyPair,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_generatedeterministickeypair,_wrap_SKY_cipher_GenerateDeterministicKeyPair,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_deterministickeypairiterator,_wrap_SKY_cipher_DeterministicKeyPairIterator,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_cipher_generatedeterministickeypairs,_wrap_SKY_cipher_GenerateDeterministicKeyPairs,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cipher_generatedeterministickeypairsseed,_wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_cipher_checkseckey,_wrap_SKY_cipher_CheckSecKey,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cipher_checkseckeyhash,_wrap_SKY_cipher_CheckSecKeyHash,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_testutil_makeaddress,_wrap_SKY_testutil_MakeAddress,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_iputil_localhostip,_wrap_SKY_iputil_LocalhostIP,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_iputil_islocalhost,_wrap_SKY_iputil_IsLocalhost,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_iputil_splitaddr,_wrap_SKY_iputil_SplitAddr,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cli_addprivatekey,_wrap_SKY_cli_AddPrivateKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_addprivatekeytofile,_wrap_SKY_cli_AddPrivateKeyToFile,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_cli_generatewallet,_wrap_SKY_cli_GenerateWallet,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_cli_makealphanumericseed,_wrap_SKY_cli_MakeAlphanumericSeed,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_encrypt_scryptchacha20poly1305_encrypt,_wrap_SKY_encrypt_ScryptChacha20poly1305_Encrypt,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_encrypt_scryptchacha20poly1305_decrypt,_wrap_SKY_encrypt_ScryptChacha20poly1305_Decrypt,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_transaction_choosespendsmaximizeuxouts,_wrap_SKY_transaction_ChooseSpendsMaximizeUxOuts,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_transaction_choosespendsminimizeuxouts,_wrap_SKY_transaction_ChooseSpendsMinimizeUxOuts,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_transaction_newuxbalance,_wrap_SKY_transaction_NewUxBalance,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_transaction_newuxbalances,_wrap_SKY_transaction_NewUxBalances,swig_arginfo_000)
  SWIG_ZEND_NAMED_FE(sky_base58_hex2base58,_wrap_SKY_base58_Hex2Base58,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_base58_encode,_wrap_SKY_base58_Encode,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_base58_decode,_wrap_SKY_base58_Decode,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_base58_string2hex,_wrap_SKY_base58_String2Hex,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_transaction_distributecoinhoursproportional,_wrap_SKY_transaction_DistributeCoinHoursProportional,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_transaction_distributespendhours,_wrap_SKY_transaction_DistributeSpendHours,swig_arginfo_000000)
+ SWIG_ZEND_NAMED_FE(sky_cli_cli_run,_wrap_SKY_cli_CLI_Run,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cli_config_getcoin,_wrap_SKY_cli_Config_GetCoin,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_config_getrpcaddress,_wrap_SKY_cli_Config_GetRPCAddress,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_getenv,_wrap_SKY_cli_Getenv,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_setenv,_wrap_SKY_cli_Setenv,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_api_newclient,_wrap_SKY_api_NewClient,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_api_client_csrf,_wrap_SKY_api_Client_CSRF,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_api_client_version,_wrap_SKY_api_Client_Version,swig_arginfo_00)
@@ -29382,53 +29296,6 @@ static zend_function_entry skycoin_functions[] = {
  SWIG_ZEND_NAMED_FE(sky_api_client_health,_wrap_SKY_api_Client_Health,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_api_client_encryptwallet,_wrap_SKY_api_Client_EncryptWallet,swig_arginfo_0000)
  SWIG_ZEND_NAMED_FE(sky_api_client_decryptwallet,_wrap_SKY_api_Client_DecryptWallet,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_wallet_createoptionshandle,_wrap_SKY_wallet_CreateOptionsHandle,swig_arginfo_00000000)
- SWIG_ZEND_NAMED_FE(sky_wallet_newbalance,_wrap_SKY_wallet_NewBalance,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_wallet_newbalancefromuxout,_wrap_SKY_wallet_NewBalanceFromUxOut,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_wallet_balance_add,_wrap_SKY_wallet_Balance_Add,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_wallet_balance_sub,_wrap_SKY_wallet_Balance_Sub,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_wallet_balance_equals,_wrap_SKY_wallet_Balance_Equals,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_wallet_balance_iszero,_wrap_SKY_wallet_Balance_IsZero,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_decodebase58bitcoinaddress,_wrap_SKY_cipher_DecodeBase58BitcoinAddress,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddressfrompubkey,_wrap_SKY_cipher_BitcoinAddressFromPubKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddressfromseckey,_wrap_SKY_cipher_BitcoinAddressFromSecKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinwalletimportformatfromseckey,_wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddressfrombytes,_wrap_SKY_cipher_BitcoinAddressFromBytes,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_seckeyfrombitcoinwalletimportformat,_wrap_SKY_cipher_SecKeyFromBitcoinWalletImportFormat,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_null,_wrap_SKY_cipher_BitcoinAddress_Null,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_bytes,_wrap_SKY_cipher_BitcoinAddress_Bytes,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_verify,_wrap_SKY_cipher_BitcoinAddress_Verify,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_string,_wrap_SKY_cipher_BitcoinAddress_String,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_checksum,_wrap_SKY_cipher_BitcoinAddress_Checksum,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_handle_close,_wrap_SKY_handle_close,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_handle_copy,_wrap_SKY_handle_copy,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_cli_run,_wrap_SKY_cli_CLI_Run,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cli_config_getcoin,_wrap_SKY_cli_Config_GetCoin,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_config_getrpcaddress,_wrap_SKY_cli_Config_GetRPCAddress,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_getenv,_wrap_SKY_cli_Getenv,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_setenv,_wrap_SKY_cli_Setenv,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_newwalletresponse,_wrap_SKY_api_NewWalletResponse,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_util_adduint64,_wrap_SKY_util_AddUint64,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_util_uint64toint64,_wrap_SKY_util_Uint64ToInt64,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_util_int64touint64,_wrap_SKY_util_Int64ToUint64,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_util_inttouint32,_wrap_SKY_util_IntToUint32,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_bip39_newdefaultmnemomic,_wrap_SKY_bip39_NewDefaultMnemomic,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_bip39_newentropy,_wrap_SKY_bip39_NewEntropy,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_bip39_newmnemonic,_wrap_SKY_bip39_NewMnemonic,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_bip39_validatemnemonic,_wrap_SKY_bip39_ValidateMnemonic,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_bip39_newseed,_wrap_SKY_bip39_NewSeed,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_params_dropletprecisiontodivisor,_wrap_SKY_params_DropletPrecisionToDivisor,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_params_dropletprecisioncheck,_wrap_SKY_params_DropletPrecisionCheck,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_newtransaction,_wrap_SKY_cli_NewTransaction,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_cipher_decodebase58address,_wrap_SKY_cipher_DecodeBase58Address,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_addressfrombytes,_wrap_SKY_cipher_AddressFromBytes,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_addressfrompubkey,_wrap_SKY_cipher_AddressFromPubKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_addressfromseckey,_wrap_SKY_cipher_AddressFromSecKey,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_address_null,_wrap_SKY_cipher_Address_Null,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_address_bytes,_wrap_SKY_cipher_Address_Bytes,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_address_verify,_wrap_SKY_cipher_Address_Verify,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_address_string,_wrap_SKY_cipher_Address_String,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cipher_address_checksum,_wrap_SKY_cipher_Address_Checksum,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_wallet_newerror,_wrap_SKY_wallet_NewError,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(sky_wallet_newwallet,_wrap_SKY_wallet_NewWallet,swig_arginfo_000)
  SWIG_ZEND_NAMED_FE(sky_wallet_wallet_lock,_wrap_SKY_wallet_Wallet_Lock,swig_arginfo_000)
@@ -29445,14 +29312,174 @@ static zend_function_entry skycoin_functions[] = {
  SWIG_ZEND_NAMED_FE(sky_wallet_wallet_getaddresses,_wrap_SKY_wallet_Wallet_GetAddresses,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_wallet_wallet_getentry,_wrap_SKY_wallet_Wallet_GetEntry,swig_arginfo_0000)
  SWIG_ZEND_NAMED_FE(sky_wallet_wallet_addentry,_wrap_SKY_wallet_Wallet_AddEntry,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_ripemd160_set,_wrap_SKY_cipher_Ripemd160_Set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_hashripemd160,_wrap_SKY_cipher_HashRipemd160,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sha256_set,_wrap_SKY_cipher_SHA256_Set,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sha256_hex,_wrap_SKY_cipher_SHA256_Hex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sha256_xor,_wrap_SKY_cipher_SHA256_Xor,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sumsha256,_wrap_SKY_cipher_SumSHA256,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sha256fromhex,_wrap_SKY_cipher_SHA256FromHex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_doublesha256,_wrap_SKY_cipher_DoubleSHA256,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_addsha256,_wrap_SKY_cipher_AddSHA256,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_merkle,_wrap_SKY_cipher_Merkle,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sha256_null,_wrap_SKY_cipher_SHA256_Null,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_newtransaction,_wrap_SKY_cli_NewTransaction,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_handle_close,_wrap_SKY_handle_close,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_handle_copy,_wrap_SKY_handle_copy,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_decodebase58address,_wrap_SKY_cipher_DecodeBase58Address,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_addressfrombytes,_wrap_SKY_cipher_AddressFromBytes,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_addressfrompubkey,_wrap_SKY_cipher_AddressFromPubKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_addressfromseckey,_wrap_SKY_cipher_AddressFromSecKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_address_null,_wrap_SKY_cipher_Address_Null,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_address_bytes,_wrap_SKY_cipher_Address_Bytes,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_address_verify,_wrap_SKY_cipher_Address_Verify,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_address_string,_wrap_SKY_cipher_Address_String,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_address_checksum,_wrap_SKY_cipher_Address_Checksum,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_decodebase58bitcoinaddress,_wrap_SKY_cipher_DecodeBase58BitcoinAddress,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddressfrompubkey,_wrap_SKY_cipher_BitcoinAddressFromPubKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddressfromseckey,_wrap_SKY_cipher_BitcoinAddressFromSecKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinwalletimportformatfromseckey,_wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddressfrombytes,_wrap_SKY_cipher_BitcoinAddressFromBytes,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_seckeyfrombitcoinwalletimportformat,_wrap_SKY_cipher_SecKeyFromBitcoinWalletImportFormat,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_null,_wrap_SKY_cipher_BitcoinAddress_Null,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_bytes,_wrap_SKY_cipher_BitcoinAddress_Bytes,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_verify,_wrap_SKY_cipher_BitcoinAddress_Verify,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_string,_wrap_SKY_cipher_BitcoinAddress_String,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_bitcoinaddress_checksum,_wrap_SKY_cipher_BitcoinAddress_Checksum,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_generatewallet,_wrap_SKY_cli_GenerateWallet,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_cli_makealphanumericseed,_wrap_SKY_cli_MakeAlphanumericSeed,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_params_dropletprecisiontodivisor,_wrap_SKY_params_DropletPrecisionToDivisor,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_params_dropletprecisioncheck,_wrap_SKY_params_DropletPrecisionCheck,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_map_get,_wrap_SKY_map_Get,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_map_haskey,_wrap_SKY_map_HasKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_map_close,_wrap_SKY_map_Close,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_wallet_entry_verify,_wrap_SKY_wallet_Entry_Verify,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_wallet_entry_verifypublic,_wrap_SKY_wallet_Entry_VerifyPublic,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cli_generateaddressesinfile,_wrap_SKY_cli_GenerateAddressesInFile,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_cli_formataddressesasjson,_wrap_SKY_cli_FormatAddressesAsJSON,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_formataddressesasjoinedarray,_wrap_SKY_cli_FormatAddressesAsJoinedArray,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_addressestostrings,_wrap_SKY_cli_AddressesToStrings,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_jsonencode_handle,_wrap_SKY_JsonEncode_Handle,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_progress_getcurrent,_wrap_SKY_Handle_Progress_GetCurrent,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_block_getheadseq,_wrap_SKY_Handle_Block_GetHeadSeq,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_block_getheadhash,_wrap_SKY_Handle_Block_GetHeadHash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_block_getpreviousblockhash,_wrap_SKY_Handle_Block_GetPreviousBlockHash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_blocks_getat,_wrap_SKY_Handle_Blocks_GetAt,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_handle_blocks_getcount,_wrap_SKY_Handle_Blocks_GetCount,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_connections_getcount,_wrap_SKY_Handle_Connections_GetCount,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_strings_getcount,_wrap_SKY_Handle_Strings_GetCount,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_handle_strings_sort,_wrap_SKY_Handle_Strings_Sort,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_handle_strings_getat,_wrap_SKY_Handle_Strings_GetAt,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletdir,_wrap_SKY_api_Handle_Client_GetWalletDir,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletfilename,_wrap_SKY_api_Handle_Client_GetWalletFileName,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletlabel,_wrap_SKY_api_Handle_Client_GetWalletLabel,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletfullpath,_wrap_SKY_api_Handle_Client_GetWalletFullPath,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletmeta,_wrap_SKY_api_Handle_GetWalletMeta,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletentriescount,_wrap_SKY_api_Handle_GetWalletEntriesCount,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_client_getwalletresponseentriescount,_wrap_SKY_api_Handle_Client_GetWalletResponseEntriesCount,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_walletgetentry,_wrap_SKY_api_Handle_WalletGetEntry,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_walletresponsegetentry,_wrap_SKY_api_Handle_WalletResponseGetEntry,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_walletresponseisencrypted,_wrap_SKY_api_Handle_WalletResponseIsEncrypted,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_walletresponsegetcryptotype,_wrap_SKY_api_Handle_WalletResponseGetCryptoType,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_walletsresponsegetcount,_wrap_SKY_api_Handle_WalletsResponseGetCount,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_walletsresponsegetat,_wrap_SKY_api_Handle_WalletsResponseGetAt,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletfolderaddress,_wrap_SKY_api_Handle_GetWalletFolderAddress,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletseed,_wrap_SKY_api_Handle_GetWalletSeed,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_getwalletlastseed,_wrap_SKY_api_Handle_GetWalletLastSeed,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_api_handle_getbuildinfodata,_wrap_SKY_api_Handle_GetBuildInfoData,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_secp256k1_pubkeyfromseckey,_wrap_SKY_secp256k1_PubkeyFromSeckey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_secp256k1_verifypubkey,_wrap_SKY_secp256k1_VerifyPubkey,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_secp256k1_verifyseckey,_wrap_SKY_secp256k1_VerifySecKey,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_secp256k1_ecdh,_wrap_SKY_secp256k1_ECDH,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_cryptotypefromstring,_wrap_SKY_wallet_CryptoTypeFromString,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_bip39_newdefaultmnemomic,_wrap_SKY_bip39_NewDefaultMnemomic,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_bip39_newentropy,_wrap_SKY_bip39_NewEntropy,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_bip39_newmnemonic,_wrap_SKY_bip39_NewMnemonic,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_bip39_validatemnemonic,_wrap_SKY_bip39_ValidateMnemonic,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_bip39_newseed,_wrap_SKY_bip39_NewSeed,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_randbyte,_wrap_SKY_cipher_RandByte,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_newpubkey,_wrap_SKY_cipher_NewPubKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyfromhex,_wrap_SKY_cipher_PubKeyFromHex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyfromseckey,_wrap_SKY_cipher_PubKeyFromSecKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyfromsig,_wrap_SKY_cipher_PubKeyFromSig,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_pubkey_verify,_wrap_SKY_cipher_PubKey_Verify,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cipher_pubkey_hex,_wrap_SKY_cipher_PubKey_Hex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_pubkeyripemd160,_wrap_SKY_cipher_PubKeyRipemd160,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_newseckey,_wrap_SKY_cipher_NewSecKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_seckeyfromhex,_wrap_SKY_cipher_SecKeyFromHex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_seckey_verify,_wrap_SKY_cipher_SecKey_Verify,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cipher_seckey_hex,_wrap_SKY_cipher_SecKey_Hex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_ecdh,_wrap_SKY_cipher_ECDH,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_newsig,_wrap_SKY_cipher_NewSig,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sigfromhex,_wrap_SKY_cipher_SigFromHex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_sig_hex,_wrap_SKY_cipher_Sig_Hex,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_signhash,_wrap_SKY_cipher_SignHash,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_verifyaddresssignedhash,_wrap_SKY_cipher_VerifyAddressSignedHash,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_verifypubkeysignedhash,_wrap_SKY_cipher_VerifyPubKeySignedHash,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_generatekeypair,_wrap_SKY_cipher_GenerateKeyPair,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cipher_generatedeterministickeypair,_wrap_SKY_cipher_GenerateDeterministicKeyPair,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_deterministickeypairiterator,_wrap_SKY_cipher_DeterministicKeyPairIterator,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_generatedeterministickeypairs,_wrap_SKY_cipher_GenerateDeterministicKeyPairs,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_generatedeterministickeypairsseed,_wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_cipher_checkseckey,_wrap_SKY_cipher_CheckSecKey,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cipher_checkseckeyhash,_wrap_SKY_cipher_CheckSecKeyHash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_apputil_catchinterruptpanic,_wrap_SKY_apputil_CatchInterruptPanic,swig_arginfo_)
+ SWIG_ZEND_NAMED_FE(sky_apputil_catchdebug,_wrap_SKY_apputil_CatchDebug,swig_arginfo_)
+ SWIG_ZEND_NAMED_FE(sky_apputil_printprogramstatus,_wrap_SKY_apputil_PrintProgramStatus,swig_arginfo_)
+ SWIG_ZEND_NAMED_FE(sky_cli_loadconfig,_wrap_SKY_cli_LoadConfig,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cli_config_fullwalletpath,_wrap_SKY_cli_Config_FullWalletPath,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_config_fulldbpath,_wrap_SKY_cli_Config_FullDBPath,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_newcli,_wrap_SKY_cli_NewCLI,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_newpasswordreader,_wrap_SKY_cli_NewPasswordReader,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_passwordfrombytes_password,_wrap_SKY_cli_PasswordFromBytes_Password,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_passwordfromterm_password,_wrap_SKY_cli_PasswordFromTerm_Password,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_util_adduint64,_wrap_SKY_util_AddUint64,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_util_uint64toint64,_wrap_SKY_util_Uint64ToInt64,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_util_int64touint64,_wrap_SKY_util_Int64ToUint64,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_util_inttouint32,_wrap_SKY_util_IntToUint32,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_certutil_newtlscertpair,_wrap_SKY_certutil_NewTLSCertPair,swig_arginfo_00000)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxout_hash,_wrap_SKY_coin_UxOut_Hash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxout_snapshothash,_wrap_SKY_coin_UxOut_SnapshotHash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxbody_hash,_wrap_SKY_coin_UxBody_Hash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxout_coinhours,_wrap_SKY_coin_UxOut_CoinHours,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_hashes,_wrap_SKY_coin_UxArray_Hashes,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_hasdupes,_wrap_SKY_coin_UxArray_HasDupes,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_sort,_wrap_SKY_coin_UxArray_Sort,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_len,_wrap_SKY_coin_UxArray_Len,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_less,_wrap_SKY_coin_UxArray_Less,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_swap,_wrap_SKY_coin_UxArray_Swap,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_coins,_wrap_SKY_coin_UxArray_Coins,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_coinhours,_wrap_SKY_coin_UxArray_CoinHours,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_sub,_wrap_SKY_coin_UxArray_Sub,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_uxarray_add,_wrap_SKY_coin_UxArray_Add,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_newaddressuxouts,_wrap_SKY_coin_NewAddressUxOuts,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_keys,_wrap_SKY_coin_AddressUxOuts_Keys,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_flatten,_wrap_SKY_coin_AddressUxOuts_Flatten,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_sub,_wrap_SKY_coin_AddressUxOuts_Sub,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_add,_wrap_SKY_coin_AddressUxOuts_Add,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_get,_wrap_SKY_coin_AddressUxOuts_Get,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_haskey,_wrap_SKY_coin_AddressUxOuts_HasKey,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_getoutputlength,_wrap_SKY_coin_AddressUxOuts_GetOutputLength,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_length,_wrap_SKY_coin_AddressUxOuts_Length,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_set,_wrap_SKY_coin_AddressUxOuts_Set,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_transaction_choosespendsmaximizeuxouts,_wrap_SKY_transaction_ChooseSpendsMaximizeUxOuts,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_transaction_choosespendsminimizeuxouts,_wrap_SKY_transaction_ChooseSpendsMinimizeUxOuts,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_transaction_newuxbalance,_wrap_SKY_transaction_NewUxBalance,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_transaction_newuxbalances,_wrap_SKY_transaction_NewUxBalances,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_file_initdatadir,_wrap_SKY_file_InitDataDir,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_file_userhome,_wrap_SKY_file_UserHome,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_file_resolveresourcedirectory,_wrap_SKY_file_ResolveResourceDirectory,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_file_determineresourcepath,_wrap_SKY_file_DetermineResourcePath,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_createoptionshandle,_wrap_SKY_wallet_CreateOptionsHandle,swig_arginfo_00000000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_newbalance,_wrap_SKY_wallet_NewBalance,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_newbalancefromuxout,_wrap_SKY_wallet_NewBalanceFromUxOut,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_balance_add,_wrap_SKY_wallet_Balance_Add,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_balance_sub,_wrap_SKY_wallet_Balance_Sub,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_balance_equals,_wrap_SKY_wallet_Balance_Equals,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_wallet_balance_iszero,_wrap_SKY_wallet_Balance_IsZero,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_logging_enablecolors,_wrap_SKY_logging_EnableColors,swig_arginfo_)
  SWIG_ZEND_NAMED_FE(sky_logging_disablecolors,_wrap_SKY_logging_DisableColors,swig_arginfo_)
  SWIG_ZEND_NAMED_FE(sky_logging_disable,_wrap_SKY_logging_Disable,swig_arginfo_)
- SWIG_ZEND_NAMED_FE(sky_api_newcreatetransactionresponse,_wrap_SKY_api_NewCreateTransactionResponse,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_api_newcreatedtransaction,_wrap_SKY_api_NewCreatedTransaction,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_api_createdtransaction_totransaction,_wrap_SKY_api_CreatedTransaction_ToTransaction,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_api_newcreatedtransactionoutput,_wrap_SKY_api_NewCreatedTransactionOutput,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_api_newcreatedtransactioninput,_wrap_SKY_api_NewCreatedTransactionInput,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_coin_newblock,_wrap_SKY_coin_NewBlock,swig_arginfo_000000)
  SWIG_ZEND_NAMED_FE(sky_coin_signedblock_verifysignature,_wrap_SKY_coin_SignedBlock_VerifySignature,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_coin_newgenesisblock,_wrap_SKY_coin_NewGenesisBlock,swig_arginfo_0000)
@@ -29485,6 +29512,19 @@ static zend_function_entry skycoin_functions[] = {
  SWIG_ZEND_NAMED_FE(sky_coin_blockheader_setversion,_wrap_SKY_coin_BlockHeader_SetVersion,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_coin_blockheader_version,_wrap_SKY_coin_BlockHeader_Version,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_coin_blockheader_prevhash,_wrap_SKY_coin_BlockHeader_PrevHash,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_params_getdistributionaddresses,_wrap_SKY_params_GetDistributionAddresses,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_params_getunlockeddistributionaddresses,_wrap_SKY_params_GetUnlockedDistributionAddresses,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_params_getlockeddistributionaddresses,_wrap_SKY_params_GetLockedDistributionAddresses,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_api_newwalletresponse,_wrap_SKY_api_NewWalletResponse,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_encrypt_scryptchacha20poly1305_encrypt,_wrap_SKY_encrypt_ScryptChacha20poly1305_Encrypt,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_encrypt_scryptchacha20poly1305_decrypt,_wrap_SKY_encrypt_ScryptChacha20poly1305_Decrypt,swig_arginfo_0000)
+ SWIG_ZEND_NAMED_FE(sky_transaction_distributecoinhoursproportional,_wrap_SKY_transaction_DistributeCoinHoursProportional,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_transaction_distributespendhours,_wrap_SKY_transaction_DistributeSpendHours,swig_arginfo_000000)
+ SWIG_ZEND_NAMED_FE(sky_droplet_fromstring,_wrap_SKY_droplet_FromString,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_droplet_tostring,_wrap_SKY_droplet_ToString,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_testutil_makeaddress,_wrap_SKY_testutil_MakeAddress,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_cli_addprivatekey,_wrap_SKY_cli_AddPrivateKey,swig_arginfo_00)
+ SWIG_ZEND_NAMED_FE(sky_cli_addprivatekeytofile,_wrap_SKY_cli_AddPrivateKeyToFile,swig_arginfo_000)
  SWIG_ZEND_NAMED_FE(sky_httphelper_address_unmarshaljson,_wrap_SKY_httphelper_Address_UnmarshalJSON,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_httphelper_address_marshaljson,_wrap_SKY_httphelper_Address_MarshalJSON,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_httphelper_coins_unmarshaljson,_wrap_SKY_httphelper_Coins_UnmarshalJSON,swig_arginfo_00)
@@ -29493,51 +29533,11 @@ static zend_function_entry skycoin_functions[] = {
  SWIG_ZEND_NAMED_FE(sky_httphelper_hours_unmarshaljson,_wrap_SKY_httphelper_Hours_UnmarshalJSON,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_httphelper_hours_marshaljson,_wrap_SKY_httphelper_Hours_MarshalJSON,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(sky_httphelper_hours_value,_wrap_SKY_httphelper_Hours_Value,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_droplet_fromstring,_wrap_SKY_droplet_FromString,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_droplet_tostring,_wrap_SKY_droplet_ToString,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxout_hash,_wrap_SKY_coin_UxOut_Hash,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxout_snapshothash,_wrap_SKY_coin_UxOut_SnapshotHash,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxbody_hash,_wrap_SKY_coin_UxBody_Hash,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxout_coinhours,_wrap_SKY_coin_UxOut_CoinHours,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_hashes,_wrap_SKY_coin_UxArray_Hashes,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_hasdupes,_wrap_SKY_coin_UxArray_HasDupes,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_sort,_wrap_SKY_coin_UxArray_Sort,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_len,_wrap_SKY_coin_UxArray_Len,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_less,_wrap_SKY_coin_UxArray_Less,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_swap,_wrap_SKY_coin_UxArray_Swap,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_coins,_wrap_SKY_coin_UxArray_Coins,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_coinhours,_wrap_SKY_coin_UxArray_CoinHours,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_sub,_wrap_SKY_coin_UxArray_Sub,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_uxarray_add,_wrap_SKY_coin_UxArray_Add,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_newaddressuxouts,_wrap_SKY_coin_NewAddressUxOuts,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_keys,_wrap_SKY_coin_AddressUxOuts_Keys,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_flatten,_wrap_SKY_coin_AddressUxOuts_Flatten,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_sub,_wrap_SKY_coin_AddressUxOuts_Sub,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_add,_wrap_SKY_coin_AddressUxOuts_Add,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_get,_wrap_SKY_coin_AddressUxOuts_Get,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_haskey,_wrap_SKY_coin_AddressUxOuts_HasKey,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_getoutputlength,_wrap_SKY_coin_AddressUxOuts_GetOutputLength,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_length,_wrap_SKY_coin_AddressUxOuts_Length,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_coin_addressuxouts_set,_wrap_SKY_coin_AddressUxOuts_Set,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_file_initdatadir,_wrap_SKY_file_InitDataDir,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_file_userhome,_wrap_SKY_file_UserHome,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_file_resolveresourcedirectory,_wrap_SKY_file_ResolveResourceDirectory,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_file_determineresourcepath,_wrap_SKY_file_DetermineResourcePath,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_params_getdistributionaddresses,_wrap_SKY_params_GetDistributionAddresses,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_params_getunlockeddistributionaddresses,_wrap_SKY_params_GetUnlockedDistributionAddresses,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_params_getlockeddistributionaddresses,_wrap_SKY_params_GetLockedDistributionAddresses,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_wallet_entry_verify,_wrap_SKY_wallet_Entry_Verify,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_wallet_entry_verifypublic,_wrap_SKY_wallet_Entry_VerifyPublic,swig_arginfo_0)
- SWIG_ZEND_NAMED_FE(sky_cli_generateaddressesinfile,_wrap_SKY_cli_GenerateAddressesInFile,swig_arginfo_0000)
- SWIG_ZEND_NAMED_FE(sky_cli_formataddressesasjson,_wrap_SKY_cli_FormatAddressesAsJSON,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_formataddressesasjoinedarray,_wrap_SKY_cli_FormatAddressesAsJoinedArray,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_cli_addressestostrings,_wrap_SKY_cli_AddressesToStrings,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_certutil_newtlscertpair,_wrap_SKY_certutil_NewTLSCertPair,swig_arginfo_00000)
- SWIG_ZEND_NAMED_FE(sky_wallet_newreadableentry,_wrap_SKY_wallet_NewReadableEntry,swig_arginfo_000)
- SWIG_ZEND_NAMED_FE(sky_wallet_loadreadablewallet,_wrap_SKY_wallet_LoadReadableWallet,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_wallet_readablewallet_save,_wrap_SKY_wallet_ReadableWallet_Save,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_wallet_readablewallet_load,_wrap_SKY_wallet_ReadableWallet_Load,swig_arginfo_00)
- SWIG_ZEND_NAMED_FE(sky_wallet_readablewallet_erase,_wrap_SKY_wallet_ReadableWallet_Erase,swig_arginfo_0)
+ SWIG_ZEND_NAMED_FE(sky_fee_verifytransactionfee,_wrap_SKY_fee_VerifyTransactionFee,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_fee_verifytransactionfeeforhours,_wrap_SKY_fee_VerifyTransactionFeeForHours,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_fee_requiredfee,_wrap_SKY_fee_RequiredFee,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_fee_remaininghours,_wrap_SKY_fee_RemainingHours,swig_arginfo_000)
+ SWIG_ZEND_NAMED_FE(sky_fee_transactionfee,_wrap_SKY_fee_TransactionFee,swig_arginfo_0000)
  SWIG_ZEND_NAMED_FE(api__richlistparams_n_set,_wrap_api__RichlistParams_N_set,swig_arginfo_00)
  SWIG_ZEND_NAMED_FE(api__richlistparams_n_get,_wrap_api__RichlistParams_N_get,swig_arginfo_0)
  SWIG_ZEND_NAMED_FE(api__richlistparams_includedistribution_set,_wrap_api__RichlistParams_IncludeDistribution_set,swig_arginfo_00)
@@ -30156,10 +30156,10 @@ le_swig__p_unsigned_int=zend_register_list_destructors_ex(_swig_default_rsrc_des
 SWIG_TypeClientData(SWIGTYPE_p_unsigned_int,&le_swig__p_unsigned_int);
 le_swig__p_a_4__unsigned_char=zend_register_list_destructors_ex(_swig_default_rsrc_destroy, NULL, SWIGTYPE_p_a_4__unsigned_char->name, module_number);
 SWIG_TypeClientData(SWIGTYPE_p_a_4__unsigned_char,&le_swig__p_a_4__unsigned_char);
-le_swig__p_a_20__unsigned_char=zend_register_list_destructors_ex(_swig_default_rsrc_destroy, NULL, SWIGTYPE_p_a_20__unsigned_char->name, module_number);
-SWIG_TypeClientData(SWIGTYPE_p_a_20__unsigned_char,&le_swig__p_a_20__unsigned_char);
 le_swig__p_a_33__unsigned_char=zend_register_list_destructors_ex(_swig_default_rsrc_destroy, NULL, SWIGTYPE_p_a_33__unsigned_char->name, module_number);
 SWIG_TypeClientData(SWIGTYPE_p_a_33__unsigned_char,&le_swig__p_a_33__unsigned_char);
+le_swig__p_a_20__unsigned_char=zend_register_list_destructors_ex(_swig_default_rsrc_destroy, NULL, SWIGTYPE_p_a_20__unsigned_char->name, module_number);
+SWIG_TypeClientData(SWIGTYPE_p_a_20__unsigned_char,&le_swig__p_a_20__unsigned_char);
 le_swig__p_a_65__unsigned_char=zend_register_list_destructors_ex(_swig_default_rsrc_destroy, NULL, SWIGTYPE_p_a_65__unsigned_char->name, module_number);
 SWIG_TypeClientData(SWIGTYPE_p_a_65__unsigned_char,&le_swig__p_a_65__unsigned_char);
 le_swig__p_a_32__unsigned_char=zend_register_list_destructors_ex(_swig_default_rsrc_destroy, NULL, SWIGTYPE_p_a_32__unsigned_char->name, module_number);
