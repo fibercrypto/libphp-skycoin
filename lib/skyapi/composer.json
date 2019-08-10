@@ -1,6 +1,6 @@
 {
     "name": "simelo/libphp-skycoin",
-    "version": "0.26.0",
+    "version": "0.27.0",
     "description": "Skycoin is a next-generation cryptocurrency.",
     "keywords": [
         "openapitools",
@@ -32,9 +32,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "Skyapi\\" : "lib/" }
+        "psr-4": { "SkyApi\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Skyapi\\" : "test/" }
+        "psr-4": { "SkyApi\\" : "test/" }
     }
 }
